@@ -1,6 +1,6 @@
 #pragma once
 
-#include "tensor.hpp"
+#include "tensor.h"
 
 template< typename ComponentType >
 class Vector
@@ -73,6 +73,9 @@ private:
     Tensor< ComponentType > tensor_;
 };
 
+// TODO: Implement all methods.
+
+// __HIDE__
 
 template< typename ComponentType >
 Vector< ComponentType >::Vector(size_t size)
@@ -180,11 +183,15 @@ Tensor< ComponentType >& Matrix< ComponentType >::tensor()
     return tensor_;
 }
 
+// __ALWAYS__
 
 // Performs a matrix-vector multiplication.
 template< typename ComponentType >
 Vector< ComponentType > matvec(const Matrix< ComponentType >& mat, const Vector< ComponentType >& vec)
 {
+    // TODO: Implement this.
+
+    // __HIDE__
 
     if (mat.cols() != vec.size())
     {
@@ -202,4 +209,9 @@ Vector< ComponentType > matvec(const Matrix< ComponentType >& mat, const Vector<
     }
 
     return out;
+    // __ALWAYS__
 }
+
+// __HIDE__
+
+// __ALWAYS__
