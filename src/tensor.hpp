@@ -6,15 +6,10 @@
 #include <stdexcept>
 #include <vector>
 
-// __HIDE__
 #include <fstream>
 #include <sstream>
-#include <cassert>
-// __ALWAYS__
 
-// __HIDE__
-
-inline size_t flatIdx(const std::vector< size_t >& shape, const std::vector< size_t >& idx)
+inline constexpr size_t flatIdx(const std::vector< size_t >& shape, const std::vector< size_t >& idx)
 {
     assert(shape.size() == idx.size());
 
@@ -68,7 +63,6 @@ ScalarType stringToScalar(const std::string& str)
     return scalar;
 }
 
-// __ALWAYS__
 
 template< class T >
 concept Arithmetic = std::is_arithmetic_v< T >;
@@ -121,19 +115,12 @@ public:
     operator()(const std::vector< size_t >& idx);
 
 private:
-    // TODO: Probably you need some members here...
-
-    // __HIDE__
 
     std::vector< size_t > shape_;
     std::vector< ComponentType > data_;
 
-    // __ALWAYS__
 };
 
-// TODO: Implement all methods of the Tensor class template.
-
-// __HIDE__
 
 template< Arithmetic ComponentType >
 Tensor< ComponentType >::Tensor()
@@ -217,15 +204,11 @@ Tensor< ComponentType >::operator()(const std::vector< size_t >& idx)
     return data_[flatIdx(shape_, idx)];
 }
 
-// __ALWAYS__
 
 // Returns true if the shapes and all elements of both tensors are equal.
 template< Arithmetic ComponentType >
 bool operator==(const Tensor< ComponentType >& a, const Tensor< ComponentType >& b)
 {
-    // TODO: Implement this comparison.
-
-    // __HIDE__
 
     if (a.shape() != b.shape())
     {
@@ -281,7 +264,6 @@ bool operator==(const Tensor< ComponentType >& a, const Tensor< ComponentType >&
     }
 
     return equal;
-    // __ALWAYS__
 }
 
 // Pretty-prints the tensor to stdout.
@@ -290,9 +272,6 @@ template< Arithmetic ComponentType >
 std::ostream&
 operator<<(std::ostream& out, const Tensor< ComponentType >& tensor)
 {
-    // TODO (optional): Implement some nice stdout printer for debugging/exercise.
-
-    // __HIDE__
 
     if (tensor.rank() == 0)
     {
@@ -348,20 +327,12 @@ operator<<(std::ostream& out, const Tensor< ComponentType >& tensor)
     }
 
     return out;
-    // __ALWAYS__
 }
-// __HIDE__
-
-// __ALWAYS__
 
 // Reads a tensor from file.
 template< Arithmetic ComponentType >
 Tensor< ComponentType > readTensorFromFile(const std::string& filename)
 {
-    // TODO: Implement this function to read in tensors from file.
-    //       The format is defined in the instructions.
-
-    // __HIDE__
 
     std::ifstream file;
     file.open(filename);
@@ -416,17 +387,12 @@ Tensor< ComponentType > readTensorFromFile(const std::string& filename)
 
     file.close();
     return tensor;
-    // __ALWAYS__
 }
 
 // Writes a tensor to file.
 template< Arithmetic ComponentType >
 void writeTensorToFile(const Tensor< ComponentType >& tensor, const std::string& filename)
 {
-    // TODO: Implement this function to write tensors to file.
-    //       The format is defined in the instructions.
-
-    // __HIDE__
 
     std::ofstream file;
     file.open(filename);
@@ -464,5 +430,4 @@ void writeTensorToFile(const Tensor< ComponentType >& tensor, const std::string&
     }
 
     file.close();
-    // __ALWAYS__
 }
