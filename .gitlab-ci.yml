@@ -37,7 +37,7 @@ stages:
 
 gcc_11_serial:
   extends: .build_template
-  image: i10git.cs.fau.de:5005/walberla/buildenvs/gcc:11
+  image: i10git.cs.fau.de:5005/walberla/buildenvs/gcc:12
   tags:
     - docker
 
