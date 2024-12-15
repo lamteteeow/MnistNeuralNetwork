@@ -1,1 +1,48 @@
-# TODO: extend list with suitable entries, e.g. `.vscode`
+# General build files
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+*.exe
+
+# C++ build tools
+cmake-build-*
+Makefile
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+*.ninja
+build/
+bin/
+lib/
+*.out
+
+# Debugging files
+*.log
+*.stackdump
+core
+debug/
+
+# IDE and editor files
+*.clangd
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.user
+*.sln
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+*.Spotlight-V100
+*.Trashes
+*.fseventsd
+*.VolumeIcon.icns
