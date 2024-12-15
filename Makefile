@@ -1,4 +1,4 @@
-.PHONY: all clean read_dataset_images
+.PHONY: all clean read_dataset_images read_dataset_labels
 
 ROOT_PATH := .
 SRC_PATH   := $(ROOT_PATH)/src
@@ -20,8 +20,13 @@ clean:
 	rm -rf $(BUILD_PATH) $(BIN_PATH)
 
 read_dataset_images: $(BIN_PATH)/read_dataset_images
+read_dataset_labels: $(BIN_PATH)/read_dataset_labels
 
 $(BIN_PATH)/read_dataset_images: $(BUILD_PATH)/read_dataset_images.o
+	mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+
+$(BIN_PATH)/read_dataset_labels: $(BUILD_PATH)/read_dataset_labels.o
 	mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
