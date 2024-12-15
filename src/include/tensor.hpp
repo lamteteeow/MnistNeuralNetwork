@@ -1,4 +1,3 @@
-
 #pragma once
 
 #include <iostream>
@@ -6,6 +5,7 @@
 #include <stdexcept>
 #include <vector>
 #include <utility>
+#include <cassert>
 
 #include <fstream>
 #include <sstream>
