@@ -3,6 +3,8 @@
 #include <cstdint>
 #include <cstdlib>
 #include <fstream>
+#include <iostream>
+#include <string>
 #include <vector>
 
 #define SPACE (" ")
@@ -27,6 +29,99 @@ uint32_t big_endian_to_lit_endian(uint32_t big_endianian) {
     little_endian |= (big_endianian & 0x00'00'00'ff) << 24;
 
     return little_endian;
+
+}
+
+/**
+ * @author Junzhe Wang
+ * @since 16.12.2024
+ * 
+ * @brief Reads MNIST label data from a binary file and stores it as one-hot encoded tensors.
+ *
+ * @param {label_file_name} The name of the binary MNIST label file.
+ * @param {labels} A vector to store one-hot encoded tensors for each label.
+ * 
+ * @return The number of labels read from the file.
+ */
+uint32_t labels_rd(std::string const& label_file_name, std::vector<Tensor<double>>& labels) {
+
+    std::ifstream input( label_file_name , std::ios::binary );
+    if ( !input.is_open() ) {
+
+        std::cerr 
+            << "Error:"
+            << SPACE
+            << "Failed to open file [" << label_file_name << "]." 
+            << std::endl;
+
+        exit( EXIT_FAILURE );
+
+    }
+
+    uint32_t MAGIC;
+    uint32_t ITEM_COUNT;
+
+    input.read( reinterpret_cast<char*>( &MAGIC )     , 4 );
+    input.read( reinterpret_cast<char*>( &ITEM_COUNT ), 4 );
+
+    MAGIC = big_endian_to_lit_endian( MAGIC );
+    ITEM_COUNT = big_endian_to_lit_endian( ITEM_COUNT );
+
+    if ( MAGIC != 0x0000'0801 ) {
+
+        std::cerr 
+            << "Error: Failed to read labels."
+            << SPACE
+            << "File [" << label_file_name << "] is not in valid format!"
+            << std::endl;
+
+        exit( EXIT_FAILURE );
+
+    }
+
+    labels.reserve( ITEM_COUNT );
+    for (uint32_t i = 0; i < ITEM_COUNT; i++) {
+
+        uint8_t label;
+        input.read( reinterpret_cast<char*>( &label ), 1 );
+
+        Tensor<double> one_hot( {10}, 0.0 );
+        one_hot({ label }) = 1.0;
+
+        labels.push_back( std::move( one_hot ) );
+
+    }
+
+    input.close();
+
+    return ITEM_COUNT;
+
+}
+
+/**
+ * @author Junzhe Wang
+ * @since 16.12.2024
+ * 
+ * @brief Displays a one-hot encoded label tensor in a human-readable format.
+ *
+ * @param {tensor} The tensor representing the one-hot encoded label.
+ *
+ * @return None
+ */
+void display_label_tensor( Tensor<double> const& tensor ) {
+
+    auto const& shape = tensor.shape();
+    bool const check = (shape.size() == 1) && (shape[0] == 10);
+    if ( !check ) {
+
+        std::cerr << "Error: Tensor does NOT possess the expected 1D shape {10}!";
+
+        exit( EXIT_FAILURE );
+
+    }
+
+    for (uint32_t i = 0; i < shape[0]; i++) std::cout << tensor({ i }) << " ";
+    std::cout << std::endl;
 
 }
 
@@ -58,6 +153,16 @@ int main(int argc, const char * argv[]) {
     }
 
     std::string const label_file_name = argv[1];
+
+    std::vector<Tensor<double>> labels;
+
+    uint32_t const ITEM_COUNT = labels_rd( label_file_name , labels );
+    for (uint32_t i = 0; i < ITEM_COUNT; i++) {
+
+        display_label_tensor( labels[i] );
+        std::cout << "\n\n";
+
+    }
 
     return 0;
 

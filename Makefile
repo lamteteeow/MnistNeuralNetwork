@@ -14,7 +14,7 @@ CFLAGS := -Wall -pedantic -Werror -std=c++20
 
 LDFLAGS := 
 
-all: read_dataset_images
+all: read_dataset_images read_dataset_labels
 
 clean:
 	rm -rf $(BUILD_PATH) $(BIN_PATH)
