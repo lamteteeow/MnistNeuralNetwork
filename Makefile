@@ -27,5 +27,5 @@ $(BIN_PATH)/read_dataset_images: $(BUILD_PATH)/read_dataset_images.o
 
 $(BUILD_PATH)/%.o: $(SRC_PATH)/%.cpp
 	mkdir -p $(dir $@)
-	$(CC) $(INC_FLAGS) $(CFLAGS) -MMD -MP -c $< -o $@
+	$(CC) $(INC_FLAGS) $(CFLAGS) -c $< -o $@
 
