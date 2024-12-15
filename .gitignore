@@ -10,7 +10,6 @@
 
 # C++ build tools
 cmake-build-*
-Makefile
 CMakeCache.txt
 CMakeFiles/
 *.cmake
