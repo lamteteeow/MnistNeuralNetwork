@@ -80,6 +80,10 @@ uint32_t image_rd(std::string const& image_file_name, std::vector<Tensor<double>
 
     }
 
+    std::cout << IMAGE_COUNT << std::endl;
+    std::cout << ROWS << std::endl;
+    std::cout << COLS << std::endl;
+
     uint32_t const image_size = ROWS * COLS;
     images.reserve( image_size );
 

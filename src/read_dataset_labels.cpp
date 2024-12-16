@@ -79,6 +79,9 @@ uint32_t labels_rd(std::string const& label_file_name, std::vector<Tensor<double
 
     }
 
+    std::cout << ITEM_COUNT << std::endl;
+    std::cout << 10 << std::endl;
+
     labels.reserve( ITEM_COUNT );
     for (uint32_t i = 0; i < ITEM_COUNT; i++) {
 
@@ -120,8 +123,7 @@ void display_label_tensor( Tensor<double> const& tensor ) {
 
     }
 
-    for (uint32_t i = 0; i < shape[0]; i++) if (tensor({ i }) != 0) std::cout << i;
-    std::cout << std::endl;
+    for (uint32_t i = 0; i < shape[0]; i++) std::cout << tensor({ i }) << std::endl;
 
 }
 
