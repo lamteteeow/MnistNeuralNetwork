@@ -80,7 +80,7 @@ uint32_t image_rd(std::string const& image_file_name, std::vector<Tensor<double>
 
     }
 
-    std::cout << IMAGE_COUNT << std::endl;
+    std::cout << 2 << std::endl;
     std::cout << ROWS << std::endl;
     std::cout << COLS << std::endl;
 

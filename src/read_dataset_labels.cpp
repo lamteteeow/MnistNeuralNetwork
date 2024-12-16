@@ -79,7 +79,7 @@ uint32_t labels_rd(std::string const& label_file_name, std::vector<Tensor<double
 
     }
 
-    std::cout << ITEM_COUNT << std::endl;
+    std::cout << 1 << std::endl;
     std::cout << 10 << std::endl;
 
     labels.reserve( ITEM_COUNT );
