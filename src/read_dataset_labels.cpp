@@ -120,7 +120,7 @@ void display_label_tensor( Tensor<double> const& tensor ) {
 
     }
 
-    for (uint32_t i = 0; i < shape[0]; i++) std::cout << tensor({ i }) << " ";
+    for (uint32_t i = 0; i < shape[0]; i++) if (tensor({ i }) != 0) std::cout << i;
     std::cout << std::endl;
 
 }
@@ -160,7 +160,6 @@ int main(int argc, const char * argv[]) {
     for (uint32_t i = 0; i < ITEM_COUNT; i++) {
 
         display_label_tensor( labels[i] );
-        std::cout << "\n\n";
 
     }
 

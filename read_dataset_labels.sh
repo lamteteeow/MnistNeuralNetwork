@@ -10,9 +10,9 @@ e#!/bin/bash
 set -e
 
 # Argument validation.
-if [ "$#" -ne 2 ]
+if [ "$#" -ne 3 ]
 then
-    echo "Usage: ./$0 <input> <output>"
+    echo "Usage: ./$0 <input> <output> <flag>"
     exit 1
 fi
 

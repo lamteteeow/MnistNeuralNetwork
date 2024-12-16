@@ -135,11 +135,9 @@ void display_2d_tensor(Tensor<double> const& tensor) {
     for (uint32_t row = 0; row < shape[0]; row++) {
         for (uint32_t col = 0; col < shape[1]; col++) {
 
-            std::cout << tensor({ row, col }) << " ";
+            std::cout << tensor({ row, col }) << std::endl;
 
         }
-
-        std::cout << "\n";
 
     }
 
@@ -181,7 +179,6 @@ int main(int argc, const char * argv[]) {
     for (uint32_t i = 0; i < IMAGE_COUNT; i++) {
 
         display_2d_tensor( images[i] );
-        std::cout << "\n\n";
 
     }
 
