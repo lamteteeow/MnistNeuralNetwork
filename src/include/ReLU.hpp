@@ -3,27 +3,27 @@
 #include "BaseLayer.hpp"
 #include "Eigen/Dense"
 
+using Tensor = Eigen::MatrixXd;
+
 class ReLU : public BaseLayer
 {
 private:
-    Eigen::MatrixXd relu_gradient;
+    Tensor relu_cache;
 
 public:
-    ReLU() : relu_gradient(Eigen::MatrixXd()) {}
+    ReLU() : relu_cache(Tensor()) {}
     ~ReLU() {}
 
     /**
      * @author Lam Tran
-     * @since 20.12.2024
-     *
-     * @brief Forward pass gradient from the rectified linear unit layer
-     *
-     * @param input_tensor Input tensor from the preceding layer
-     * @return
+     * @since 20-12-2024
+     * @brief : Introduces non-linearity to each individual input neuron x_i of x via ReLU
+     * @param input_tensor Input tensor from the predecessor layer
+     * @return Tensor
      */
-    Eigen::MatrixXd forward(const Eigen::MatrixXd &input_tensor)
+    Tensor forward(const Tensor &input_tensor)
     {
-        relu_gradient = (input_tensor.array() > 0).cast<double>();
+        this->relu_cache = (input_tensor.array() > 0).cast<double>();
         return input_tensor.cwiseMax(0.0);
     }
 
@@ -31,13 +31,13 @@ public:
      * @author Lam Tran
      * @since 20.12.2024
      *
-     * @brief Backward pass gradient from the rectified linear unit layer
+     * @brief Compute the next error tensor from the rectified linear unit layer
      *
-     * @param error_tensor Error tensor from the successive layer
-     * @return
+     * @param error_tensor Error tensor from the successor layer
+     * @return Tensor
      */
-    Eigen::MatrixXd backward(const Eigen::MatrixXd &error_tensor)
+    Tensor backward(const Tensor &error_tensor)
     {
-        return error_tensor.cwiseProduct(relu_gradient);
+        return error_tensor.cwiseProduct(this->relu_cache);
     }
 };

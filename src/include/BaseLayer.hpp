@@ -2,10 +2,12 @@
 
 #include "Eigen/Dense"
 
+using Tensor = Eigen::MatrixXd;
+
 class BaseLayer
 {
 public:
-    BaseLayer() : trainable(false), weights(Eigen::MatrixXd()) {}
+    BaseLayer() : trainable(false), weights(Tensor()) {}
     virtual ~BaseLayer() = default;
 
     /**
@@ -14,10 +16,10 @@ public:
      *
      * @brief Forward pass from this layer
      *
-     * @param input_tensor Input tensor from the preceding layer
-     * @return Eigen::MatrixXd
+     * @param input_tensor Input tensor from the predecessor layer
+     * @return Tensor
      */
-    virtual Eigen::MatrixXd forward(const Eigen::MatrixXd &input_tensor) = 0;
+    virtual Tensor forward(const Tensor &input_tensor) = 0;
 
     /**
      * @author Lam Tran
@@ -25,11 +27,11 @@ public:
      *
      * @brief Backward pass from this layer
      *
-     * @param error_tensor Error tensor from the successive layer
-     * @return Eigen::MatrixXd
+     * @param error_tensor Error tensor from the successor layer
+     * @return Tensor
      */
-    virtual Eigen::MatrixXd backward(const Eigen::MatrixXd &error_tensor) = 0;
+    virtual Tensor backward(const Tensor &error_tensor) = 0;
 
     bool trainable;
-    Eigen::MatrixXd weights;
+    Tensor weights;
 };
