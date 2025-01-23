@@ -8,10 +8,8 @@ class BaseLayer
 {
 public:
     BaseLayer() : trainable(false), weights(Tensor()) {}
+    // BaseLayer(bool is_trainable) : trainable(is_trainable), weights(Tensor()) {}
     virtual ~BaseLayer() = default;
-
-    bool trainable;
-    Tensor weights;
 
     /**
      * @author Lam Tran
@@ -34,4 +32,7 @@ public:
      * @return Tensor
      */
     virtual Tensor backward(const Tensor &error_tensor) = 0;
+
+    bool trainable;
+    Tensor weights;
 };

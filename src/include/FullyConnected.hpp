@@ -10,24 +10,23 @@ using Tensor = Eigen::MatrixXd;
 class FullyConnected final : public BaseLayer
 {
 private:
-    bool trainable = true;
     unsigned int input_size;
     unsigned int output_size;
     Optimizer *optimizer;
     Tensor input_tensor_cache;
 
 public:
-    FullyConnected() {}
-    ~FullyConnected() {}
-
     FullyConnected(unsigned int input_size, unsigned int output_size, Optimizer *optimizer)
     {
         this->input_size = input_size;
         this->output_size = output_size;
-        // Declare weights tensor to include bias
+        // Declare weights tensor size to include bias
         this->weights = Tensor::Zero(this->input_size + 1, this->output_size);
+        this->trainable = true;
         this->optimizer = optimizer;
     };
+
+    ~FullyConnected() {}
 
     /**
      * @author Lam Tran

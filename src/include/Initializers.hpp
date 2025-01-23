@@ -47,7 +47,7 @@ public:
         const double sigma = std::sqrt(2.0 / (fan_in + fan_out));
         std::normal_distribution<double> distribution(0.0, sigma);
 
-#pragma omp parallel for collapse(2)
+#pragma omp parallel for collapse(2) 
         for (int i = 0; i < fan_in; i++)
         {
             for (int j = 0; j < fan_out; j++)

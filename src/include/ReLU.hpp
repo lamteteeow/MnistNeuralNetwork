@@ -8,11 +8,10 @@ using Tensor = Eigen::MatrixXd;
 class ReLU final : public BaseLayer
 {
 private:
-    bool trainable = true;
     Tensor relu_cache;
 
 public:
-    ReLU() {}
+    ReLU() : BaseLayer() {}
     ~ReLU() {}
 
     /**

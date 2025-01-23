@@ -8,11 +8,10 @@ using Tensor = Eigen::MatrixXd;
 class SoftMax final : public BaseLayer
 {
 private:
-    bool trainable = true;
     Tensor input_tensor_cache;
 
 public:
-    SoftMax() {}
+    SoftMax() : BaseLayer() {}
     ~SoftMax() {}
 
     /**

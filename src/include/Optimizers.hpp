@@ -6,9 +6,6 @@ using Tensor = Eigen::MatrixXd;
 
 class Optimizer
 {
-private:
-    bool trainable = false;
-
 public:
     virtual ~Optimizer() = default;
 
