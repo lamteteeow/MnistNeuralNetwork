@@ -5,13 +5,14 @@
 
 using Tensor = Eigen::MatrixXd;
 
-class ReLU : public BaseLayer
+class ReLU final : public BaseLayer
 {
 private:
+    bool trainable = true;
     Tensor relu_cache;
 
 public:
-    ReLU() : relu_cache(Tensor()) {}
+    ReLU() {}
     ~ReLU() {}
 
     /**
@@ -21,7 +22,7 @@ public:
      * @param input_tensor Input tensor from the predecessor layer
      * @return Tensor
      */
-    Tensor forward(const Tensor &input_tensor)
+    Tensor forward(const Tensor &input_tensor) override
     {
         this->relu_cache = (input_tensor.array() > 0).cast<double>();
         return input_tensor.cwiseMax(0.0);
@@ -36,7 +37,7 @@ public:
      * @param error_tensor Error tensor from the successor layer
      * @return Tensor
      */
-    Tensor backward(const Tensor &error_tensor)
+    Tensor backward(const Tensor &error_tensor) override
     {
         return error_tensor.cwiseProduct(this->relu_cache);
     }

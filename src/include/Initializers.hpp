@@ -1,77 +1,93 @@
 #pragma once
 
 #include "Eigen/Dense"
-
 #include <random>
 
 using Tensor = Eigen::MatrixXd;
 
-class Xavier
+class Initializer
 {
-public:
-    Tensor weights;
+protected:
     unsigned int seed;
+    Tensor weights;
 
-    Xavier(unsigned int seed = 0) : seed(seed) {}
+public:
+    Initializer(unsigned int seed = 0) : seed(seed) {}
+    virtual ~Initializer() = default;
 
-    /**
-     * @author Lam Tran
-     * @since 22-01-2025
-     * @brief Initialize the weights using Xavier's initialization technique in combination with a seed for reproducibility using Mersenne twister engine
-     * @param weights_shape
-     * @param fan_in
-     * @param fan_out
-     * @return Tensor
-     */
-    Tensor initialize(const std::vector<int> &weights_shape, int fan_in, int fan_out)
+    // Pure virtual function for weight initialization
+    virtual void initialize(unsigned int fan_in, unsigned int fan_out) = 0;
+
+    const Tensor &getWeights() const
     {
-        double sigma = std::sqrt(2.0 / (fan_in + fan_out));
-        std::mt19937 generator(this->seed);
-        std::normal_distribution<double> distribution(0.0, sigma);
-
-        this->weights.resize(weights_shape[0], weights_shape[1]);
-        for (int i = 0; i < weights_shape[0]; ++i)
-        {
-            for (int j = 0; j < weights_shape[1]; ++j)
-            {
-                this->weights(i, j) = distribution(generator);
-            }
-        }
-        return this->weights;
+        return weights;
     }
 };
 
-class He
+class Xavier final : public Initializer
 {
-public:
-    Tensor weights;
-    unsigned int seed;
+private:
+    std::mt19937 gen;
 
-    He(unsigned int seed = 0) : seed(seed) {}
+public:
+    Xavier(unsigned int seed = 0) : Initializer(seed), gen(seed) {}
 
     /**
      * @author Lam Tran
-     * @since 22-01-2025
-     * @brief Initialize the weights using He's initialization technique in combination with a seed for reproducibility using Mersenne twister engine
-     * @param weights_shape
+     * @since 23-01-2025
+     * @brief Initialize weights using Xavier initialization
+     * @param rows
+     * @param cols
      * @param fan_in
      * @param fan_out
-     * @return Tensor
      */
-    Tensor initialize(const std::vector<int> &weights_shape, int fan_in)
+    void initialize(unsigned int fan_in, unsigned int fan_out) override
     {
-        double sigma = std::sqrt(2.0 / fan_in);
-        std::mt19937 generator(this->seed);
+        weights = Tensor::Zero(fan_in, fan_out);
+        const double sigma = std::sqrt(2.0 / (fan_in + fan_out));
         std::normal_distribution<double> distribution(0.0, sigma);
 
-        this->weights.resize(weights_shape[0], weights_shape[1]);
-        for (int i = 0; i < weights_shape[0]; ++i)
+#pragma omp parallel for collapse(2)
+        for (int i = 0; i < fan_in; i++)
         {
-            for (int j = 0; j < weights_shape[1]; ++j)
+            for (int j = 0; j < fan_out; j++)
             {
-                this->weights(i, j) = distribution(generator);
+                weights(i, j) = distribution(gen);
             }
         }
-        return this->weights;
+    }
+};
+
+class He final : public Initializer
+{
+private:
+    std::mt19937 gen;
+
+public:
+    He(unsigned int seed = 0) : Initializer(seed), gen(seed) {}
+
+    /**
+     * @author Lam Tran
+     * @since 23-01-2025
+     * @brief Initialize weights using He initialization
+     * @param rows
+     * @param cols
+     * @param fan_in
+     * @param fan_out
+     */
+    void initialize(unsigned int fan_in, unsigned int fan_out) override
+    {
+        weights = Tensor::Zero(fan_in, fan_out);
+        const double sigma = std::sqrt(2.0 / fan_in);
+        std::normal_distribution<double> distribution(0.0, sigma);
+
+#pragma omp parallel for collapse(2)
+        for (int i = 0; i < fan_in; i++)
+        {
+            for (int j = 0; j < fan_out; j++)
+            {
+                weights(i, j) = distribution(gen);
+            }
+        }
     }
 };

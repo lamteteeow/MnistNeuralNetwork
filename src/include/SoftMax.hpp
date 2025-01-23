@@ -5,13 +5,14 @@
 
 using Tensor = Eigen::MatrixXd;
 
-class SoftMax : public BaseLayer
+class SoftMax final : public BaseLayer
 {
 private:
+    bool trainable = true;
     Tensor input_tensor_cache;
 
 public:
-    SoftMax() : input_tensor_cache(Tensor()) {}
+    SoftMax() {}
     ~SoftMax() {}
 
     /**
@@ -28,10 +29,8 @@ public:
         // Shift for numerical stability
         Tensor x_shifted = input_tensor.colwise() - input_tensor.rowwise().maxCoeff();
         Tensor input_tensor_exp = x_shifted.array().exp();
-        Tensor input_tensor_pre = input_tensor_exp.array().colwise() / input_tensor_exp.array().rowwise().sum();
-
-        this->input_tensor_cache = input_tensor_pre;
-        return input_tensor_pre;
+        this->input_tensor_cache = input_tensor_exp.array().colwise() / input_tensor_exp.array().rowwise().sum();
+        return this->input_tensor_cache;
     }
 
     /**
@@ -43,7 +42,7 @@ public:
      * @param error_tensor Error tensor from the successor layer
      * @return Tensor
      */
-    Tensor backward(const Tensor &error_tensor)
+    Tensor backward(const Tensor &error_tensor) override
     {
         // Calculate the gradient of the loss with respect to input
         Tensor weighted_sum_error = (error_tensor.array() * input_tensor_cache.array()).rowwise().sum();
