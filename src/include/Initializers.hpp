@@ -47,10 +47,10 @@ public:
         const double sigma = std::sqrt(2.0 / (fan_in + fan_out));
         std::normal_distribution<double> distribution(0.0, sigma);
 
-#pragma omp parallel for collapse(2) 
-        for (int i = 0; i < fan_in; i++)
+#pragma omp parallel for collapse(2)
+        for (unsigned int i = 0; i < fan_in; i++)
         {
-            for (int j = 0; j < fan_out; j++)
+            for (unsigned int j = 0; j < fan_out; j++)
             {
                 weights(i, j) = distribution(gen);
             }
@@ -82,9 +82,9 @@ public:
         std::normal_distribution<double> distribution(0.0, sigma);
 
 #pragma omp parallel for collapse(2)
-        for (int i = 0; i < fan_in; i++)
+        for (unsigned int i = 0; i < fan_in; i++)
         {
-            for (int j = 0; j < fan_out; j++)
+            for (unsigned int j = 0; j < fan_out; j++)
             {
                 weights(i, j) = distribution(gen);
             }
