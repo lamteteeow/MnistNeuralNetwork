@@ -14,6 +14,7 @@ private:
     unsigned int output_size;
     Optimizer *optimizer;
     Tensor input_tensor_cache;
+    Tensor input_tensor_w_bias;
 
 public:
     FullyConnected(unsigned int input_size, unsigned int output_size, Optimizer *optimizer)
@@ -29,15 +30,15 @@ public:
     ~FullyConnected() {}
 
     /**
-     * @author Lam Tran
-     * @since 23-01-2025
+     * @author Hamiz Ali
+     * @since 24-01-2025
      * @brief Initialize the weights and bias using the provided initializer
      * @param weights_initializer
      * @param bias_initializer
      */
     void initialize(Initializer *weights_initializer, Initializer *bias_initializer)
     {
-        weights_initializer->initialize(input_size - 1, output_size);
+        weights_initializer->initialize(input_size, output_size);
         bias_initializer->initialize(1, output_size);
 
         this->weights.topRows(input_size) = weights_initializer->getWeights();
@@ -45,37 +46,35 @@ public:
     }
 
     /**
-     * @author Lam Tran
-     * @since 23-01-2025
+     * @author Hamiz Ali
+     * @since 24-01-2025
      * @brief Forward pass through the fully connected layer
      * @param input_tensor
      * @return Tensor
      */
     Tensor forward(const Tensor &input_tensor) override
     {
-        input_tensor_cache = Tensor::Zero(input_tensor.rows(), input_tensor.cols() + 1);
-        input_tensor_cache.leftCols(input_tensor.cols()) = input_tensor;
-        input_tensor_cache.rightCols(1).setOnes();
-        return input_tensor_cache * this->weights;
+        input_tensor_cache = input_tensor;
+
+        input_tensor_w_bias = Tensor::Zero(input_tensor.rows(), input_tensor.cols() + 1);
+        input_tensor_w_bias.leftCols(input_tensor.cols()) = input_tensor;
+        input_tensor_w_bias.rightCols(1).setOnes();
+
+        return input_tensor_w_bias * this->weights;
     }
 
     /**
-     * @author Lam Tran
-     * @since 23-01-2025
+     * @author Hamiz
+     * @since 24-01-2025
      * @brief Backward pass through the fully connected layer
      * @param error_tensor
      * @return Tensor
      */
     Tensor backward(const Tensor &error_tensor) override
     {
-        // Calculate gradients with respect to weights
-        Tensor gradient_weights = input_tensor_cache.transpose() * error_tensor;
-
-        // Update weights using the optimizer
-        // TODO: check if fc1 only or both fc1 and fc2?
-        this->weights = optimizer->updateWeights(weights, gradient_weights);
-
-        // Calculate and return gradient with respect to inputs
-        return error_tensor * this->weights.transpose();
+        Tensor gradient_weights = input_tensor_w_bias.transpose() * error_tensor;
+        this->weights = optimizer->updateWeights(this->weights, gradient_weights);
+        Tensor weights_no_bias = this->weights.topRows(this->weights.rows() - 1);
+        return error_tensor * weights_no_bias.transpose();
     }
 };
