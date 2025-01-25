@@ -22,7 +22,6 @@ lib/
 # Debugging files
 *.log
 *.stackdump
-core
 debug/
 
 # IDE and editor files
