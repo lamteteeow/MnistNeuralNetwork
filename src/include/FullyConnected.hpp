@@ -30,7 +30,7 @@ public:
     ~FullyConnected() {}
 
     /**
-     * @author Hamiz Ali
+     * @author Hamiz Ali, Lam Tran
      * @since 24-01-2025
      * @brief Initialize the weights and bias using the provided initializer
      * @param weights_initializer
@@ -46,7 +46,7 @@ public:
     }
 
     /**
-     * @author Hamiz Ali
+     * @author Hamiz Ali, Lam Tran
      * @since 24-01-2025
      * @brief Forward pass through the fully connected layer
      * @param input_tensor
@@ -64,7 +64,7 @@ public:
     }
 
     /**
-     * @author Hamiz
+     * @author Hamiz Ali, , Lam Tran
      * @since 24-01-2025
      * @brief Backward pass through the fully connected layer
      * @param error_tensor

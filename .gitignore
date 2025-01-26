@@ -23,6 +23,8 @@ lib/
 *.log
 *.stackdump
 debug/
+tmp/
+results/
 
 # IDE and editor files
 *.clangd

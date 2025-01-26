@@ -33,8 +33,8 @@ public:
     Xavier(unsigned int seed = 0) : Initializer(seed), gen(seed) {}
 
     /**
-     * @author Lam Tran
-     * @since 23-01-2025
+     * @author Lam Tran, Hamiz Ali
+     * @since 24-01-2025
      * @brief Initialize weights using Xavier initialization
      * @param rows
      * @param cols
@@ -67,8 +67,8 @@ public:
     He(unsigned int seed = 0) : Initializer(seed), gen(seed) {}
 
     /**
-     * @author Lam Tran
-     * @since 23-01-2025
+     * @author Lam Tran, Hamiz Ali
+     * @since 24-01-2025
      * @brief Initialize weights using He initialization
      * @param rows
      * @param cols

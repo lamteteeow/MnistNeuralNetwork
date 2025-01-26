@@ -1,31 +1,32 @@
-e#!/bin/bash
+#!/bin/bash
 
-# Author: Junzhe Wang
-# Date: 16.12.2024
-# Description: Script to process MNIST dataset labels using the compiled C++ program.
+# Author: Junzhe Wang, Lam Tran
+# Date: 15.12.2024, 26.01.2025
+# Description: Script to process MNIST label dataset using the compiled C++ program.
 
-# This script should read a dataset image into a tensor and pretty-print it into a text file...
+# This script should read a dataset label into a tensor and pretty-print it into a text file...
 
 # Exit if any commad fails.
 set -e
 
 # Argument validation.
-if [ "$#" -ne 3 ]
+if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]
 then
-    echo "Usage: ./$0 <input> <output> <flag>"
+    echo "Usage: $0 <label_dataset_input> <label_tensor_output> [<label_index>]"
     exit 1
 fi
 
-input="$1"
-output="$2"
+label_dataset_input="$1"
+label_tensor_output="$2"
+label_index="${3:-}"
 
-if [ ! -f "$input" ]
+if [ ! -f "$label_dataset_input" ]
 then
-    echo "Error: Input file [$input] does NOT exist!"
+    echo "Error: Input file [$label_dataset_input] does NOT exist!"
     exit 1
 fi
 
-echo "MNIST dataset image processing..."
+echo "MNIST dataset label processing..."
 
 executable="./bin/read_dataset_labels"
 if [ ! -x "$executable" ]
@@ -34,13 +35,20 @@ then
     exit 1
 fi
 
-"$executable" "$input" > "$output"
-if [ ! -f "$output" ]
+if [ -n "$label_index" ] && [ "$label_index" -gt 0 ]
 then
-    echo "Error: Failed to create output file [$output]."
+    "$executable" "$label_dataset_input" "$label_index" > "$label_tensor_output"
+else
+    "$executable" "$label_dataset_input" > "$label_tensor_output"
+fi
+
+if [ ! -f "$label_tensor_output" ]
+then
+    echo "Error: Failed to output label tensor file [$label_tensor_output]."
     exit 1
 fi
 
-echo "MNIST dataset labels processed successfully."
-echo "The output is written in [$output]."
+echo "MNIST label dataset processed successfully."
+echo "The label tensor output is written in [$label_tensor_output]."
 exit 0
+

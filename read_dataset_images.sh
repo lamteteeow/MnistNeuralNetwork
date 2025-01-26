@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Author: Junzhe Wang
-# Date: 15.12.2024
-# Description: Script to process MNIST dataset images using the compiled C++ program.
+# Author: Junzhe Wang, Lam Tran
+# Date: 15.12.2024, 26.01.2025
+# Description: Script to process MNIST image dataset using the compiled C++ program.
 
 # This script should read a dataset image into a tensor and pretty-print it into a text file...
 
@@ -10,18 +10,19 @@
 set -e
 
 # Argument validation.
-if [ "$#" -ne 3 ]
+if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]
 then
-    echo "Usage: ./$0 <input> <output> <flag>"
+    echo "Usage: $0 <image_dataset_input> <image_tensor_output> [<image_index>]"
     exit 1
 fi
 
-input="$1"
-output="$2"
+image_dataset_input="$1"
+image_tensor_output="$2"
+image_index="${3:-}"
 
-if [ ! -f "$input" ]
+if [ ! -f "$image_dataset_input" ]
 then
-    echo "Error: Input file [$input] does NOT exist!"
+    echo "Error: Input file [$image_dataset_input] does NOT exist!"
     exit 1
 fi
 
@@ -34,14 +35,20 @@ then
     exit 1
 fi
 
-"$executable" "$input" > "$output"
-if [ ! -f "$output" ]
+if [ -n "$image_index" ] && [ "$image_index" -gt 0 ]
 then
-    echo "Error: Failed to create output file [$output]."
+    "$executable" "$image_dataset_input" "$image_index" > "$image_tensor_output"
+else
+    "$executable" "$image_dataset_input" > "$image_tensor_output"
+fi
+
+if [ ! -f "$image_tensor_output" ]
+then
+    echo "Error: Failed to output image tensor file [$image_tensor_output]."
     exit 1
 fi
 
-echo "MNIST dataset images processed successfully."
-echo "The output is written in [$output]."
+echo "MNIST image dataset processed successfully."
+echo "The image tensor output is written in [$image_tensor_output]."
 exit 0
 

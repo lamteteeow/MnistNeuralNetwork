@@ -160,33 +160,47 @@ void display_2d_tensor(Tensor<double> const& tensor) {
  *
  * */
 int main(int argc, const char * argv[]) {
-
-    if ( argc != 2 ) {
-
-        std::cerr 
-            << "Usage:" 
+    if (argc != 2 && argc != 3)
+    {
+        std::cerr
+            << "Usage:"
             << SPACE
-            << "./" << argv[0] 
+            << "./" << argv[0]
             << SPACE
-            << "<image-file>" << std::endl;
-
+            << "<image-file>"
+            << SPACE
+            << "[<image-index>]" << std::endl;
         return 1;
-
     }
 
     std::string const image_file_name = argv[1];
+    int image_index = -1;
+
+    if (argc == 3)
+    {
+        image_index = std::atoi(argv[2]);
+    }
 
     std::vector<Tensor<double>> images;
+    uint32_t const IMAGE_COUNT = image_rd(image_file_name, images);
 
-    uint32_t const IMAGE_COUNT = image_rd( image_file_name , images );
-
-    for (uint32_t i = 0; i < IMAGE_COUNT; i++) {
-
-        display_2d_tensor( images[i] );
-
+    if (image_index >= 0)
+    {
+        if (image_index >= static_cast<int>(IMAGE_COUNT))
+        {
+            std::cerr << "Image index out of range" << std::endl;
+            return 1;
+        }
+        display_2d_tensor(images[image_index]);
+    }
+    else
+    {
+#pragma omp parallel for
+        for (uint32_t i = 0; i < IMAGE_COUNT; i++)
+        {
+            display_2d_tensor(images[i]);
+        }
     }
 
     return 0;
-
 }
-
