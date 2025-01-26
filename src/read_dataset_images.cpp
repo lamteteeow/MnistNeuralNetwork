@@ -148,8 +148,8 @@ void display_2d_tensor(Tensor<double> const& tensor) {
 }
 
 /**
- * @author Junzhe Wang
- * @since 15.12.2024
+ * @author Junzhe Wang, Lam Tran
+ * @since 26.01.2025
  *
  * @brief Entry point for the program {read_dataset_images.cpp}
  *
@@ -195,7 +195,6 @@ int main(int argc, const char * argv[]) {
     }
     else
     {
-#pragma omp parallel for
         for (uint32_t i = 0; i < IMAGE_COUNT; i++)
         {
             display_2d_tensor(images[i]);

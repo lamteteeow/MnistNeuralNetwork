@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author: Junzhe Wang, Lam Tran
-# Date: 15.12.2024, 26.01.2025
+# Date: 26.01.2025
 # Description: Script to process MNIST image dataset using the compiled C++ program.
 
 # This script should read a dataset image into a tensor and pretty-print it into a text file...

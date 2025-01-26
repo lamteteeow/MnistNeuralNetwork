@@ -43,7 +43,8 @@ uint32_t big_endian_to_lit_endian(uint32_t big_endianian) {
  * 
  * @return The number of labels read from the file.
  */
-uint32_t labels_rd(std::string const& label_file_name, std::vector<Tensor<double>>& labels) {
+uint32_t label_rd(std::string const &label_file_name, std::vector<Tensor<double>> &labels)
+{
 
     std::ifstream input( label_file_name , std::ios::binary );
     if ( !input.is_open() ) {
@@ -98,7 +99,6 @@ uint32_t labels_rd(std::string const& label_file_name, std::vector<Tensor<double
     input.close();
 
     return ITEM_COUNT;
-
 }
 
 /**
@@ -128,8 +128,8 @@ void display_label_tensor( Tensor<double> const& tensor ) {
 }
 
 /**
- * @author Junzhe Wang
- * @since 16.12.2024
+ * @author Junzhe Wang, Lam Tran
+ * @since 26.01.2025
  *
  * @brief Entry point for the program {read_dataset_labels.cpp}
  *
@@ -139,33 +139,48 @@ void display_label_tensor( Tensor<double> const& tensor ) {
  * @return The status code signifies the program return status.
  *
  * */
-int main(int argc, const char * argv[]) {
-
-    if ( argc != 2 ) {
-
-        std::cerr 
-            << "Usage:" 
+int main(int argc, const char *argv[])
+{
+    if (argc != 2 && argc != 3)
+    {
+        std::cerr
+            << "Usage:"
             << SPACE
-            << "./" << argv[0] 
+            << "./" << argv[0]
             << SPACE
-            << "<label-file>" << std::endl;
-
+            << "<image-file>"
+            << SPACE
+            << "[<image-index>]" << std::endl;
         return 1;
-
     }
 
     std::string const label_file_name = argv[1];
+    int label_index = -1;
+
+    if (argc == 3)
+    {
+        label_index = std::atoi(argv[2]);
+    }
 
     std::vector<Tensor<double>> labels;
+    uint32_t const LABEL_COUNT = label_rd(label_file_name, labels);
 
-    uint32_t const ITEM_COUNT = labels_rd( label_file_name , labels );
-    for (uint32_t i = 0; i < ITEM_COUNT; i++) {
-
-        display_label_tensor( labels[i] );
-
+    if (label_index >= 0)
+    {
+        if (label_index >= static_cast<int>(LABEL_COUNT))
+        {
+            std::cerr << "Label index out of range" << std::endl;
+            return 1;
+        }
+        display_label_tensor(labels[label_index]);
+    }
+    else
+    {
+        for (uint32_t i = 0; i < LABEL_COUNT; i++)
+        {
+            display_label_tensor(labels[i]);
+        }
     }
 
     return 0;
-
 }
-
