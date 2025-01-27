@@ -159,7 +159,7 @@ int main(int argc, const char *argv[])
 
     if (argc == 3)
     {
-        label_index = std::atoi(argv[2]);
+        label_index = std::stoi(argv[2]);
     }
 
     std::vector<Tensor<double>> labels;

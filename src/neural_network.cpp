@@ -113,8 +113,6 @@ int main(int argc, char *argv[])
         return 1;
     }
     // configurations for the neural network
-    int input_size = std::stoi(configs["input_size"]);
-    int output_size = std::stoi(configs["output_size"]);
     int batch_size = std::stoi(configs["batch_size"]);
     int hidden_size = std::stoi(configs["hidden_size"]);
     double learning_rate = std::stod(configs["learning_rate"]);
@@ -143,7 +141,7 @@ int main(int argc, char *argv[])
     std::cout << "Training images: " << train_images.rows() << ", Training labels: " << train_labels.rows() << std::endl;
 
     // Create and train the neural network
-    NeuralNetwork nn(input_size, hidden_size, output_size, learning_rate);
+    NeuralNetwork nn(784, hidden_size, 10, learning_rate);
 
     std::cout << "Training the neural network..." << std::endl;
 
