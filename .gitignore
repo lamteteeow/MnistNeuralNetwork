@@ -19,12 +19,14 @@ bin/
 lib/
 *.out
 
+# C++ formatter config
+.clang-format
+
 # Debugging files
 *.log
 *.stackdump
 debug/
 tmp/
-results/
 
 # IDE and editor files
 *.clangd

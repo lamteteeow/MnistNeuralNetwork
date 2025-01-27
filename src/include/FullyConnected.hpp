@@ -27,6 +27,7 @@ public:
         this->optimizer = optimizer;
     };
 
+    FullyConnected() {}
     ~FullyConnected() {}
 
     /**

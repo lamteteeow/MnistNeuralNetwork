@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Eigen/Dense"
+#include <iostream>
 
 using Tensor = Eigen::MatrixXd;
 
@@ -50,6 +51,17 @@ private:
 
 public:
     ADAM() : learningRate(0.001), beta1(0.9), beta2(0.999), epsilon(1e-8), t(0) {}
+    /**
+     * @author Lam Tran
+     * @since 20-12-2024
+     * @brief Construct ADAM optimizer with learning rate, beta1, beta2, and epsilon
+     * @param learningRate aka step size
+     * @param beta1 Exponential decay rate for momentum term aka first moment estimates
+     * @param beta2 Exponential decay rate for velocity term aka second-moment estimates
+     * @param epsilon Small value to prevent division by zero
+     * @param t Number of iterations (internally managed)
+     * @param lambda Rate of decay for the moment estimates (not implemented)
+     */
     ADAM(double learningRate, double beta1, double beta2, double epsilon) : learningRate(learningRate), beta1(beta1), beta2(beta2), epsilon(epsilon), t(0) {}
     ~ADAM() override {}
 
@@ -61,8 +73,12 @@ public:
      * @param gradient
      * @return Tensor
      */
-    Tensor updateWeights(Tensor &weights, Tensor &gradient) override
-    {
+    Tensor updateWeights(Tensor &weights, Tensor &gradient) override {
+        // Initialize m and v if not initialized
+        if (t == 0) {
+            m = Tensor::Zero(weights.rows(), weights.cols());
+            v = Tensor::Zero(weights.rows(), weights.cols());
+        }
         t++;
         m = beta1 * m + (1 - beta1) * gradient;
         v = beta2 * v + (1 - beta2) * gradient.cwiseProduct(gradient);

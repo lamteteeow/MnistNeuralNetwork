@@ -1,11 +1,12 @@
-#include "NeuralNetwork.hpp"
-#include "EigenDataSetLoader.hpp"
 #include "Eigen/Dense"
+#include "EigenDataSetLoader.hpp"
+#include "NeuralNetwork.hpp"
+#include <chrono>
 #include <fstream>
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
-#include <map>
 
 using Tensor = Eigen::MatrixXd;
 
@@ -13,12 +14,12 @@ using Tensor = Eigen::MatrixXd;
  * @author Hamiz Ali
  * @since 24.01.2025
  *
- * @brief Utility function to trim leading and trailing whitespace characters from a string.
+ * @brief Utility function to trim leading and trailing whitespace characters
+ * from a string.
  *
  * @param str The input string that needs to be trimmed.
  * @return A new string with leading and trailing whitespaces removed.
  */
-
 std::string trim(const std::string &str)
 {
     auto start = str.find_first_not_of(" \t");
@@ -30,15 +31,15 @@ std::string trim(const std::string &str)
  * @author Hamiz Ali
  * @since 24.01.2025
  *
- * @brief Reads key-value pairs from a configuration file and stores them in a map.
- *
- * The configuration file should have lines in the format `key=value`. Lines that
- * are empty or start with `#` are ignored. Duplicate keys will overwrite previous values.
+ * @brief Reads and parses key-value pairs from a configuration file and stores
+ * them in a map. The configuration file should have lines in the format
+ * `key=value`. Lines that are empty or start with `#` are ignored. Duplicate
+ * keys will overwrite previous values.
  *
  * @param filename The path to the configuration file.
- * @return A map containing configuration key-value pairs. If the file is invalid, an empty map is returned.
+ * @return A map containing configuration key-value pairs. If the file is
+ * invalid, an empty map is returned.
  */
-
 std::map<std::string, std::string> read_network_configurations(const std::string &filename)
 {
     std::map<std::string, std::string> configs;
@@ -94,8 +95,7 @@ std::map<std::string, std::string> read_network_configurations(const std::string
  * @param {argv} cmd-line argument values.
  *
  * @return The status code signifies the program return status.
- * */
-
+ */
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -113,6 +113,8 @@ int main(int argc, char *argv[])
         return 1;
     }
     // configurations for the neural network
+    int input_size = std::stoi(configs["input_size"]);
+    int output_size = std::stoi(configs["output_size"]);
     int batch_size = std::stoi(configs["batch_size"]);
     int hidden_size = std::stoi(configs["hidden_size"]);
     double learning_rate = std::stod(configs["learning_rate"]);
@@ -141,12 +143,17 @@ int main(int argc, char *argv[])
     std::cout << "Training images: " << train_images.rows() << ", Training labels: " << train_labels.rows() << std::endl;
 
     // Create and train the neural network
-    NeuralNetwork nn(784, hidden_size, 10, learning_rate);
+    NeuralNetwork nn(input_size, hidden_size, output_size, learning_rate);
 
     std::cout << "Training the neural network..." << std::endl;
+
+    auto start_time = std::chrono::high_resolution_clock::now();
     nn.fit(train_images, train_labels, num_epochs, batch_size);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::seconds>(end_time - start_time);
 
     std::cout << "Training completed " << std::endl;
+    std::cout << "Training time: " << duration.count() << " seconds" << std::endl;
 
     nn.evaluate(test_images, test_labels, batch_size, rel_path_log_file);
 

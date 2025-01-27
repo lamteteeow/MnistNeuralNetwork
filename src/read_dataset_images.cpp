@@ -178,7 +178,7 @@ int main(int argc, const char * argv[]) {
 
     if (argc == 3)
     {
-        image_index = std::atoi(argv[2]);
+        image_index = std::stoi(argv[2]);
     }
 
     std::vector<Tensor<double>> images;
