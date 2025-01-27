@@ -170,7 +170,6 @@ class NeuralNetwork {
         for (unsigned int epoch = 0; epoch < num_epochs; ++epoch) {
             int batch_num = 1;
             double batch_loss = 0.0;
-            // #pragma omp parallel for private(batch_loss) reduction(+ : batch_num)
             for (int i = 0; i < train_images.rows(); i += batch_size) {
                 Tensor batch_images =
                     train_images.middleRows(i, std::min(batch_size, (unsigned int)train_images.rows() - i));
