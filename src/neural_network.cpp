@@ -153,9 +153,9 @@ int main(int argc, char *argv[])
     std::cout << "Training completed " << std::endl;
     std::cout << "Training time: " << duration.count() << " seconds" << std::endl;
 
-    nn.evaluate(test_images, test_labels, batch_size, rel_path_log_file);
+    double accuracy = nn.evaluate(test_images, test_labels, batch_size, rel_path_log_file);
 
-    std::cout << "Testing completed: >> Log File: " << rel_path_log_file << std::endl;
+    std::cout << "Testing completed: " << accuracy << "% >> Log File: " << rel_path_log_file << std::endl;
 
     return 0;
 }

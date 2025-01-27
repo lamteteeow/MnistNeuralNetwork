@@ -37,7 +37,6 @@ public:
     }
 };
 
-// TODO: Finish ADAM implementation
 class ADAM final : public Optimizer
 {
 private:

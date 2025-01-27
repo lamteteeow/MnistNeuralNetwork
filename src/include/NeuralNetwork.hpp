@@ -26,8 +26,9 @@ class NeuralNetwork {
     FullyConnected *fc2;
     SoftMax *softmax;
     CrossEntropyLoss *loss;
-    Optimizer *optimizer1;
-    Optimizer *optimizer2;
+    Optimizer *optimizer;
+    // Optimizer *optimizer1;
+    // Optimizer *optimizer2;
     Initializer *weights_initializer;
     Initializer *bias_initializer;
 
@@ -52,22 +53,25 @@ class NeuralNetwork {
         : input_size(input_size), hidden_size(hidden_size), output_size(output_size), learning_rate(learning_rate) {
         // Initialize optimizer and initializers
         int seed = 123;
-        optimizer1 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
+        optimizer = new SGD(learning_rate);
+        // optimizer1 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
         // optimizer1 = new SGD(learning_rate);
-        optimizer2 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
+        // optimizer2 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
         // optimizer2 = new SGD(learning_rate);
         weights_initializer = new Xavier(seed);
         bias_initializer = new Xavier(seed);
 
         // Initialize layers
-        fc1 = new FullyConnected(input_size, hidden_size, optimizer1);
+        fc1 = new FullyConnected(input_size, hidden_size, optimizer);
         relu = new ReLU();
-        fc2 = new FullyConnected(hidden_size, output_size, optimizer2);
+        fc2 = new FullyConnected(hidden_size, output_size, optimizer);
         softmax = new SoftMax();
         loss = new CrossEntropyLoss();
 
         // Initialize weights and biases for layers
+        // fc1->initialize(weights_initializer, weights_initializer);
         fc1->initialize(weights_initializer, bias_initializer);
+        // fc2->initialize(weights_initializer, weights_initializer);
         fc2->initialize(weights_initializer, bias_initializer);
     }
 
@@ -124,8 +128,8 @@ class NeuralNetwork {
      * @param batch_size
      * @param log_file
      */
-    void evaluate(const Tensor &test_images, const Tensor &test_labels, unsigned int batch_size,
-                  const std::string &log_file) {
+    double evaluate(const Tensor &test_images, const Tensor &test_labels, unsigned int batch_size,
+                    const std::string &log_file) {
         std::ofstream log_stream(log_file);
         unsigned int correct_count = 0;
         for (int batch_start = 0; batch_start < test_images.rows(); batch_start += batch_size)
@@ -152,6 +156,7 @@ class NeuralNetwork {
             }
         }
         log_stream.close();
+        return (static_cast<double>(correct_count) / test_images.rows()) * 100.0;
     }
 
     /**
@@ -191,8 +196,9 @@ class NeuralNetwork {
         delete fc2;
         delete softmax;
         delete loss;
-        delete optimizer1;
-        delete optimizer2;
+        delete optimizer;
+        // delete optimizer1;
+        // delete optimizer2;
         delete weights_initializer;
         delete bias_initializer;
     }

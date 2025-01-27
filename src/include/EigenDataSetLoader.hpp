@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Eigen/Dense"
-#include <string>
 #include <fstream>
-#include <vector>
 #include <stdexcept>
+#include <string>
+#include <vector>
 
 using Tensor = Eigen::MatrixXd;
 
@@ -220,6 +220,7 @@ inline Tensor EigenDataSetLoader::read_images()
 inline Tensor EigenDataSetLoader::read_labels()
 {
   validate_file_open();
+
   if (read_big_endian_int() != 2049)
   {
     throw std::runtime_error("Error: Invalid file type (not a MNIST label file).");
