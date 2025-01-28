@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Eigen/Dense"
-#include <iostream>
+#include <mutex>
 
 using Tensor = Eigen::MatrixXd;
 
@@ -46,10 +46,12 @@ private:
     double epsilon;
     Tensor m;
     Tensor v;
-    int t;
+    bool uninitialized = true;
+    static inline std::mutex mtx;
+    static inline int t = 0;
 
-public:
-    ADAM() : learningRate(0.001), beta1(0.9), beta2(0.999), epsilon(1e-8), t(0) {}
+  public:
+    ADAM() : learningRate(0.001), beta1(0.9), beta2(0.999), epsilon(1e-8), uninitialized(true) {}
     /**
      * @author Lam Tran
      * @since 20-12-2024
@@ -58,10 +60,11 @@ public:
      * @param beta1 Exponential decay rate for momentum term aka first moment estimates
      * @param beta2 Exponential decay rate for velocity term aka second-moment estimates
      * @param epsilon Small value to prevent division by zero
-     * @param t Number of iterations (internally managed)
+     * @param t Number of iterations (statically managed)
      * @param lambda Rate of decay for the moment estimates (not implemented)
      */
-    ADAM(double learningRate, double beta1, double beta2, double epsilon) : learningRate(learningRate), beta1(beta1), beta2(beta2), epsilon(epsilon), t(0) {}
+    ADAM(double learningRate, double beta1, double beta2, double epsilon)
+        : learningRate(learningRate), beta1(beta1), beta2(beta2), epsilon(epsilon), uninitialized(true) {}
     ~ADAM() override {}
 
     /**
@@ -74,15 +77,22 @@ public:
      */
     Tensor updateWeights(Tensor &weights, Tensor &gradient) override {
         // Initialize m and v if not initialized
-        if (t == 0) {
+        if (uninitialized) {
             m = Tensor::Zero(weights.rows(), weights.cols());
             v = Tensor::Zero(weights.rows(), weights.cols());
+            uninitialized = false;
         }
-        t++;
+
+        int t_temp;
+        {
+            std::lock_guard<std::mutex> lock(mtx);
+            t_temp = ++t;
+        }
+
         m = beta1 * m + (1 - beta1) * gradient;
         v = beta2 * v + (1 - beta2) * gradient.cwiseProduct(gradient);
-        Tensor m_hat = m / (1 - std::pow(beta1, t));
-        Tensor v_hat = v / (1 - std::pow(beta2, t));
+        Tensor m_hat = m / (1 - std::pow(beta1, t_temp));
+        Tensor v_hat = v / (1 - std::pow(beta2, t_temp));
         return weights - learningRate * (m_hat.array() / (v_hat.array().sqrt() + epsilon)).matrix();
     }
 };

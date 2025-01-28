@@ -195,7 +195,7 @@ Current batch: 1
  - image 192: Prediction=0. Label=0
  - image 193: Prediction=9. Label=9
  - image 194: Prediction=0. Label=0
- - image 195: Prediction=8. Label=3
+ - image 195: Prediction=3. Label=3
  - image 196: Prediction=1. Label=1
  - image 197: Prediction=6. Label=6
  - image 198: Prediction=4. Label=4
@@ -267,7 +267,7 @@ Current batch: 2
  - image 263: Prediction=7. Label=7
  - image 264: Prediction=9. Label=9
  - image 265: Prediction=1. Label=1
- - image 266: Prediction=8. Label=8
+ - image 266: Prediction=5. Label=8
  - image 267: Prediction=1. Label=1
  - image 268: Prediction=8. Label=8
  - image 269: Prediction=0. Label=0
@@ -321,11 +321,11 @@ Current batch: 2
  - image 317: Prediction=5. Label=5
  - image 318: Prediction=3. Label=2
  - image 319: Prediction=5. Label=5
- - image 320: Prediction=7. Label=9
+ - image 320: Prediction=1. Label=9
  - image 321: Prediction=7. Label=2
  - image 322: Prediction=9. Label=9
  - image 323: Prediction=3. Label=3
- - image 324: Prediction=0. Label=0
+ - image 324: Prediction=5. Label=0
  - image 325: Prediction=4. Label=4
  - image 326: Prediction=2. Label=2
  - image 327: Prediction=0. Label=0
@@ -364,7 +364,7 @@ Current batch: 2
 Current batch: 3
  - image 360: Prediction=4. Label=4
  - image 361: Prediction=6. Label=6
- - image 362: Prediction=7. Label=2
+ - image 362: Prediction=2. Label=2
  - image 363: Prediction=2. Label=2
  - image 364: Prediction=5. Label=5
  - image 365: Prediction=0. Label=0
@@ -446,10 +446,10 @@ Current batch: 3
  - image 441: Prediction=0. Label=0
  - image 442: Prediction=3. Label=3
  - image 443: Prediction=0. Label=0
- - image 444: Prediction=8. Label=2
+ - image 444: Prediction=2. Label=2
  - image 445: Prediction=0. Label=6
  - image 446: Prediction=6. Label=6
- - image 447: Prediction=4. Label=4
+ - image 447: Prediction=9. Label=4
  - image 448: Prediction=8. Label=9
  - image 449: Prediction=5. Label=3
  - image 450: Prediction=5. Label=3
@@ -481,7 +481,7 @@ Current batch: 3
  - image 476: Prediction=1. Label=1
  - image 477: Prediction=2. Label=2
  - image 478: Prediction=5. Label=5
- - image 479: Prediction=9. Label=9
+ - image 479: Prediction=5. Label=9
 Current batch: 4
  - image 480: Prediction=1. Label=1
  - image 481: Prediction=9. Label=9
@@ -572,7 +572,7 @@ Current batch: 4
  - image 566: Prediction=6. Label=6
  - image 567: Prediction=0. Label=0
  - image 568: Prediction=6. Label=6
- - image 569: Prediction=5. Label=3
+ - image 569: Prediction=3. Label=3
  - image 570: Prediction=5. Label=5
  - image 571: Prediction=4. Label=4
  - image 572: Prediction=8. Label=8
@@ -581,12 +581,12 @@ Current batch: 4
  - image 575: Prediction=9. Label=9
  - image 576: Prediction=3. Label=3
  - image 577: Prediction=3. Label=3
- - image 578: Prediction=8. Label=3
+ - image 578: Prediction=2. Label=3
  - image 579: Prediction=7. Label=7
  - image 580: Prediction=8. Label=8
  - image 581: Prediction=0. Label=0
  - image 582: Prediction=2. Label=8
- - image 583: Prediction=2. Label=2
+ - image 583: Prediction=8. Label=2
  - image 584: Prediction=1. Label=1
  - image 585: Prediction=7. Label=7
  - image 586: Prediction=0. Label=0
@@ -614,7 +614,7 @@ Current batch: 5
  - image 607: Prediction=6. Label=6
  - image 608: Prediction=0. Label=0
  - image 609: Prediction=2. Label=2
- - image 610: Prediction=4. Label=4
+ - image 610: Prediction=2. Label=4
  - image 611: Prediction=0. Label=0
  - image 612: Prediction=2. Label=2
  - image 613: Prediction=8. Label=2
@@ -632,7 +632,7 @@ Current batch: 5
  - image 625: Prediction=6. Label=6
  - image 626: Prediction=7. Label=7
  - image 627: Prediction=9. Label=9
- - image 628: Prediction=9. Label=3
+ - image 628: Prediction=3. Label=3
  - image 629: Prediction=2. Label=2
  - image 630: Prediction=9. Label=9
  - image 631: Prediction=8. Label=8
@@ -688,7 +688,7 @@ Current batch: 5
  - image 681: Prediction=9. Label=9
  - image 682: Prediction=1. Label=1
  - image 683: Prediction=3. Label=3
- - image 684: Prediction=3. Label=7
+ - image 684: Prediction=1. Label=7
  - image 685: Prediction=8. Label=8
  - image 686: Prediction=3. Label=3
  - image 687: Prediction=3. Label=3
@@ -743,10 +743,10 @@ Current batch: 6
  - image 735: Prediction=1. Label=1
  - image 736: Prediction=4. Label=4
  - image 737: Prediction=6. Label=6
- - image 738: Prediction=8. Label=2
+ - image 738: Prediction=2. Label=2
  - image 739: Prediction=5. Label=5
  - image 740: Prediction=9. Label=4
- - image 741: Prediction=8. Label=2
+ - image 741: Prediction=2. Label=2
  - image 742: Prediction=0. Label=0
  - image 743: Prediction=6. Label=6
  - image 744: Prediction=2. Label=2
@@ -791,7 +791,7 @@ Current batch: 6
  - image 783: Prediction=1. Label=1
  - image 784: Prediction=4. Label=4
  - image 785: Prediction=5. Label=5
- - image 786: Prediction=6. Label=6
+ - image 786: Prediction=5. Label=6
  - image 787: Prediction=8. Label=8
  - image 788: Prediction=9. Label=9
  - image 789: Prediction=4. Label=4
@@ -800,12 +800,12 @@ Current batch: 6
  - image 792: Prediction=3. Label=3
  - image 793: Prediction=8. Label=8
  - image 794: Prediction=0. Label=0
- - image 795: Prediction=1. Label=3
+ - image 795: Prediction=3. Label=3
  - image 796: Prediction=2. Label=2
  - image 797: Prediction=5. Label=5
  - image 798: Prediction=1. Label=1
  - image 799: Prediction=2. Label=2
- - image 800: Prediction=8. Label=8
+ - image 800: Prediction=5. Label=8
  - image 801: Prediction=3. Label=3
  - image 802: Prediction=4. Label=4
  - image 803: Prediction=4. Label=4
@@ -888,7 +888,7 @@ Current batch: 7
  - image 879: Prediction=8. Label=8
  - image 880: Prediction=7. Label=7
  - image 881: Prediction=9. Label=4
- - image 882: Prediction=9. Label=9
+ - image 882: Prediction=7. Label=9
  - image 883: Prediction=5. Label=3
  - image 884: Prediction=0. Label=0
  - image 885: Prediction=6. Label=6
@@ -1019,7 +1019,7 @@ Current batch: 8
  - image 1009: Prediction=0. Label=0
  - image 1010: Prediction=4. Label=4
  - image 1011: Prediction=1. Label=1
- - image 1012: Prediction=9. Label=7
+ - image 1012: Prediction=7. Label=7
  - image 1013: Prediction=9. Label=9
  - image 1014: Prediction=5. Label=6
  - image 1015: Prediction=4. Label=4
@@ -1046,7 +1046,7 @@ Current batch: 8
  - image 1036: Prediction=2. Label=2
  - image 1037: Prediction=1. Label=1
  - image 1038: Prediction=1. Label=1
- - image 1039: Prediction=9. Label=7
+ - image 1039: Prediction=1. Label=7
  - image 1040: Prediction=1. Label=1
  - image 1041: Prediction=5. Label=5
  - image 1042: Prediction=3. Label=3
@@ -1057,25 +1057,25 @@ Current batch: 8
  - image 1047: Prediction=0. Label=0
  - image 1048: Prediction=9. Label=9
  - image 1049: Prediction=2. Label=2
- - image 1050: Prediction=2. Label=2
+ - image 1050: Prediction=3. Label=2
  - image 1051: Prediction=4. Label=4
  - image 1052: Prediction=8. Label=8
  - image 1053: Prediction=2. Label=2
  - image 1054: Prediction=1. Label=1
- - image 1055: Prediction=9. Label=7
+ - image 1055: Prediction=7. Label=7
  - image 1056: Prediction=2. Label=2
  - image 1057: Prediction=4. Label=4
  - image 1058: Prediction=9. Label=9
  - image 1059: Prediction=4. Label=4
  - image 1060: Prediction=4. Label=4
  - image 1061: Prediction=0. Label=0
- - image 1062: Prediction=9. Label=3
+ - image 1062: Prediction=7. Label=3
  - image 1063: Prediction=9. Label=9
  - image 1064: Prediction=2. Label=2
  - image 1065: Prediction=2. Label=2
  - image 1066: Prediction=3. Label=3
  - image 1067: Prediction=3. Label=3
- - image 1068: Prediction=4. Label=8
+ - image 1068: Prediction=8. Label=8
  - image 1069: Prediction=3. Label=3
  - image 1070: Prediction=5. Label=5
  - image 1071: Prediction=7. Label=7
@@ -1181,7 +1181,7 @@ Current batch: 9
  - image 1170: Prediction=8. Label=8
  - image 1171: Prediction=7. Label=7
  - image 1172: Prediction=3. Label=3
- - image 1173: Prediction=9. Label=7
+ - image 1173: Prediction=7. Label=7
  - image 1174: Prediction=2. Label=2
  - image 1175: Prediction=7. Label=7
  - image 1176: Prediction=0. Label=0
@@ -1200,7 +1200,7 @@ Current batch: 9
  - image 1189: Prediction=1. Label=1
  - image 1190: Prediction=5. Label=5
  - image 1191: Prediction=7. Label=0
- - image 1192: Prediction=4. Label=9
+ - image 1192: Prediction=9. Label=9
  - image 1193: Prediction=1. Label=1
  - image 1194: Prediction=9. Label=7
  - image 1195: Prediction=0. Label=0
@@ -1213,7 +1213,7 @@ Current batch: 10
  - image 1201: Prediction=1. Label=1
  - image 1202: Prediction=5. Label=8
  - image 1203: Prediction=0. Label=0
- - image 1204: Prediction=2. Label=3
+ - image 1204: Prediction=3. Label=3
  - image 1205: Prediction=3. Label=3
  - image 1206: Prediction=2. Label=7
  - image 1207: Prediction=2. Label=2
@@ -1248,10 +1248,10 @@ Current batch: 10
  - image 1236: Prediction=1. Label=1
  - image 1237: Prediction=2. Label=2
  - image 1238: Prediction=1. Label=1
- - image 1239: Prediction=3. Label=3
+ - image 1239: Prediction=5. Label=3
  - image 1240: Prediction=1. Label=1
  - image 1241: Prediction=7. Label=7
- - image 1242: Prediction=9. Label=4
+ - image 1242: Prediction=4. Label=4
  - image 1243: Prediction=5. Label=5
  - image 1244: Prediction=7. Label=7
  - image 1245: Prediction=2. Label=2
@@ -1262,7 +1262,7 @@ Current batch: 10
  - image 1250: Prediction=6. Label=6
  - image 1251: Prediction=2. Label=2
  - image 1252: Prediction=5. Label=5
- - image 1253: Prediction=4. Label=4
+ - image 1253: Prediction=6. Label=4
  - image 1254: Prediction=1. Label=1
  - image 1255: Prediction=9. Label=9
  - image 1256: Prediction=5. Label=2
@@ -1301,7 +1301,7 @@ Current batch: 10
  - image 1289: Prediction=5. Label=5
  - image 1290: Prediction=5. Label=3
  - image 1291: Prediction=3. Label=3
- - image 1292: Prediction=6. Label=6
+ - image 1292: Prediction=5. Label=6
  - image 1293: Prediction=6. Label=6
  - image 1294: Prediction=0. Label=0
  - image 1295: Prediction=1. Label=1
@@ -1336,7 +1336,7 @@ Current batch: 11
  - image 1323: Prediction=4. Label=4
  - image 1324: Prediction=8. Label=8
  - image 1325: Prediction=6. Label=8
- - image 1326: Prediction=2. Label=7
+ - image 1326: Prediction=1. Label=7
  - image 1327: Prediction=9. Label=9
  - image 1328: Prediction=9. Label=7
  - image 1329: Prediction=1. Label=1
@@ -1424,7 +1424,7 @@ Current batch: 11
  - image 1411: Prediction=0. Label=0
  - image 1412: Prediction=2. Label=2
  - image 1413: Prediction=4. Label=4
- - image 1414: Prediction=9. Label=9
+ - image 1414: Prediction=5. Label=9
  - image 1415: Prediction=8. Label=8
  - image 1416: Prediction=0. Label=0
  - image 1417: Prediction=9. Label=9
@@ -1451,7 +1451,7 @@ Current batch: 11
  - image 1438: Prediction=0. Label=0
  - image 1439: Prediction=9. Label=9
 Current batch: 12
- - image 1440: Prediction=9. Label=4
+ - image 1440: Prediction=4. Label=4
  - image 1441: Prediction=8. Label=8
  - image 1442: Prediction=3. Label=3
  - image 1443: Prediction=8. Label=8
@@ -1505,7 +1505,7 @@ Current batch: 12
  - image 1491: Prediction=6. Label=6
  - image 1492: Prediction=9. Label=9
  - image 1493: Prediction=5. Label=5
- - image 1494: Prediction=9. Label=7
+ - image 1494: Prediction=0. Label=7
  - image 1495: Prediction=3. Label=3
  - image 1496: Prediction=7. Label=7
  - image 1497: Prediction=7. Label=7
@@ -1525,7 +1525,7 @@ Current batch: 12
  - image 1511: Prediction=4. Label=4
  - image 1512: Prediction=9. Label=9
  - image 1513: Prediction=3. Label=3
- - image 1514: Prediction=8. Label=2
+ - image 1514: Prediction=2. Label=2
  - image 1515: Prediction=1. Label=1
  - image 1516: Prediction=4. Label=4
  - image 1517: Prediction=0. Label=0
@@ -1534,7 +1534,7 @@ Current batch: 12
  - image 1520: Prediction=7. Label=7
  - image 1521: Prediction=5. Label=5
  - image 1522: Prediction=9. Label=7
- - image 1523: Prediction=8. Label=8
+ - image 1523: Prediction=5. Label=8
  - image 1524: Prediction=8. Label=8
  - image 1525: Prediction=5. Label=5
  - image 1526: Prediction=0. Label=0
@@ -1574,7 +1574,7 @@ Current batch: 12
 Current batch: 13
  - image 1560: Prediction=8. Label=8
  - image 1561: Prediction=4. Label=4
- - image 1562: Prediction=8. Label=8
+ - image 1562: Prediction=5. Label=8
  - image 1563: Prediction=7. Label=7
  - image 1564: Prediction=7. Label=7
  - image 1565: Prediction=0. Label=0
@@ -1616,7 +1616,7 @@ Current batch: 13
  - image 1601: Prediction=3. Label=3
  - image 1602: Prediction=6. Label=6
  - image 1603: Prediction=1. Label=1
- - image 1604: Prediction=3. Label=2
+ - image 1604: Prediction=2. Label=2
  - image 1605: Prediction=3. Label=3
  - image 1606: Prediction=7. Label=7
  - image 1607: Prediction=5. Label=3
@@ -1722,7 +1722,7 @@ Current batch: 14
  - image 1706: Prediction=4. Label=4
  - image 1707: Prediction=1. Label=1
  - image 1708: Prediction=0. Label=0
- - image 1709: Prediction=5. Label=9
+ - image 1709: Prediction=3. Label=9
  - image 1710: Prediction=7. Label=7
  - image 1711: Prediction=2. Label=2
  - image 1712: Prediction=0. Label=0
@@ -1734,13 +1734,13 @@ Current batch: 14
  - image 1718: Prediction=7. Label=7
  - image 1719: Prediction=8. Label=8
  - image 1720: Prediction=4. Label=4
- - image 1721: Prediction=7. Label=7
+ - image 1721: Prediction=9. Label=7
  - image 1722: Prediction=2. Label=2
  - image 1723: Prediction=0. Label=0
  - image 1724: Prediction=4. Label=4
  - image 1725: Prediction=6. Label=6
  - image 1726: Prediction=0. Label=0
- - image 1727: Prediction=7. Label=3
+ - image 1727: Prediction=3. Label=3
  - image 1728: Prediction=1. Label=1
  - image 1729: Prediction=1. Label=1
  - image 1730: Prediction=5. Label=3
@@ -1864,7 +1864,7 @@ Current batch: 15
  - image 1847: Prediction=5. Label=5
  - image 1848: Prediction=7. Label=7
  - image 1849: Prediction=4. Label=4
- - image 1850: Prediction=9. Label=8
+ - image 1850: Prediction=7. Label=8
  - image 1851: Prediction=9. Label=9
  - image 1852: Prediction=6. Label=6
  - image 1853: Prediction=9. Label=9
@@ -1879,13 +1879,13 @@ Current batch: 15
  - image 1862: Prediction=4. Label=4
  - image 1863: Prediction=2. Label=2
  - image 1864: Prediction=4. Label=4
- - image 1865: Prediction=4. Label=4
+ - image 1865: Prediction=9. Label=4
  - image 1866: Prediction=5. Label=5
  - image 1867: Prediction=1. Label=1
- - image 1868: Prediction=4. Label=1
+ - image 1868: Prediction=1. Label=1
  - image 1869: Prediction=9. Label=9
  - image 1870: Prediction=0. Label=0
- - image 1871: Prediction=8. Label=2
+ - image 1871: Prediction=2. Label=2
  - image 1872: Prediction=4. Label=4
  - image 1873: Prediction=9. Label=9
  - image 1874: Prediction=5. Label=5
@@ -1897,7 +1897,7 @@ Current batch: 15
  - image 1880: Prediction=6. Label=6
  - image 1881: Prediction=9. Label=9
  - image 1882: Prediction=8. Label=8
- - image 1883: Prediction=9. Label=7
+ - image 1883: Prediction=7. Label=7
  - image 1884: Prediction=1. Label=1
  - image 1885: Prediction=1. Label=1
  - image 1886: Prediction=6. Label=6
@@ -1956,7 +1956,7 @@ Current batch: 16
  - image 1938: Prediction=6. Label=4
  - image 1939: Prediction=1. Label=1
  - image 1940: Prediction=5. Label=5
- - image 1941: Prediction=7. Label=7
+ - image 1941: Prediction=8. Label=7
  - image 1942: Prediction=8. Label=8
  - image 1943: Prediction=6. Label=6
  - image 1944: Prediction=0. Label=0
@@ -1983,7 +1983,7 @@ Current batch: 16
  - image 1965: Prediction=2. Label=2
  - image 1966: Prediction=7. Label=7
  - image 1967: Prediction=5. Label=5
- - image 1968: Prediction=1. Label=8
+ - image 1968: Prediction=8. Label=8
  - image 1969: Prediction=6. Label=6
  - image 1970: Prediction=5. Label=5
  - image 1971: Prediction=6. Label=6
@@ -2056,7 +2056,7 @@ Current batch: 16
  - image 2038: Prediction=8. Label=8
  - image 2039: Prediction=6. Label=6
 Current batch: 17
- - image 2040: Prediction=5. Label=5
+ - image 2040: Prediction=4. Label=5
  - image 2041: Prediction=1. Label=1
  - image 2042: Prediction=0. Label=0
  - image 2043: Prediction=8. Label=4
@@ -2126,7 +2126,7 @@ Current batch: 17
  - image 2107: Prediction=8. Label=8
  - image 2108: Prediction=2. Label=2
  - image 2109: Prediction=7. Label=3
- - image 2110: Prediction=8. Label=2
+ - image 2110: Prediction=2. Label=2
  - image 2111: Prediction=8. Label=8
  - image 2112: Prediction=2. Label=2
  - image 2113: Prediction=5. Label=5
@@ -2154,7 +2154,7 @@ Current batch: 17
  - image 2135: Prediction=1. Label=6
  - image 2136: Prediction=1. Label=1
  - image 2137: Prediction=1. Label=1
- - image 2138: Prediction=8. Label=2
+ - image 2138: Prediction=2. Label=2
  - image 2139: Prediction=3. Label=3
  - image 2140: Prediction=6. Label=6
  - image 2141: Prediction=7. Label=7
@@ -2327,10 +2327,10 @@ Current batch: 19
  - image 2306: Prediction=4. Label=4
  - image 2307: Prediction=4. Label=4
  - image 2308: Prediction=3. Label=3
- - image 2309: Prediction=8. Label=8
+ - image 2309: Prediction=5. Label=8
  - image 2310: Prediction=9. Label=9
  - image 2311: Prediction=2. Label=2
- - image 2312: Prediction=3. Label=3
+ - image 2312: Prediction=5. Label=3
  - image 2313: Prediction=9. Label=9
  - image 2314: Prediction=7. Label=7
  - image 2315: Prediction=1. Label=1
@@ -2411,9 +2411,9 @@ Current batch: 19
  - image 2390: Prediction=2. Label=2
  - image 2391: Prediction=2. Label=2
  - image 2392: Prediction=3. Label=3
- - image 2393: Prediction=5. Label=8
+ - image 2393: Prediction=3. Label=8
  - image 2394: Prediction=4. Label=4
- - image 2395: Prediction=3. Label=8
+ - image 2395: Prediction=8. Label=8
  - image 2396: Prediction=2. Label=2
  - image 2397: Prediction=2. Label=2
  - image 2398: Prediction=1. Label=1
@@ -2427,13 +2427,13 @@ Current batch: 20
  - image 2405: Prediction=3. Label=3
  - image 2406: Prediction=1. Label=9
  - image 2407: Prediction=7. Label=7
- - image 2408: Prediction=5. Label=3
+ - image 2408: Prediction=3. Label=3
  - image 2409: Prediction=1. Label=1
  - image 2410: Prediction=0. Label=0
  - image 2411: Prediction=1. Label=1
  - image 2412: Prediction=2. Label=2
  - image 2413: Prediction=5. Label=5
- - image 2414: Prediction=9. Label=9
+ - image 2414: Prediction=4. Label=9
  - image 2415: Prediction=2. Label=2
  - image 2416: Prediction=1. Label=1
  - image 2417: Prediction=0. Label=0
@@ -2468,7 +2468,7 @@ Current batch: 20
  - image 2446: Prediction=2. Label=2
  - image 2447: Prediction=4. Label=4
  - image 2448: Prediction=9. Label=9
- - image 2449: Prediction=0. Label=0
+ - image 2449: Prediction=5. Label=0
  - image 2450: Prediction=5. Label=3
  - image 2451: Prediction=8. Label=8
  - image 2452: Prediction=5. Label=5
@@ -2481,7 +2481,7 @@ Current batch: 20
  - image 2459: Prediction=2. Label=2
  - image 2460: Prediction=5. Label=5
  - image 2461: Prediction=0. Label=0
- - image 2462: Prediction=2. Label=2
+ - image 2462: Prediction=0. Label=2
  - image 2463: Prediction=7. Label=7
  - image 2464: Prediction=4. Label=4
  - image 2465: Prediction=6. Label=6
@@ -2533,7 +2533,7 @@ Current batch: 20
  - image 2511: Prediction=3. Label=3
  - image 2512: Prediction=8. Label=8
  - image 2513: Prediction=7. Label=7
- - image 2514: Prediction=9. Label=4
+ - image 2514: Prediction=4. Label=4
  - image 2515: Prediction=5. Label=5
  - image 2516: Prediction=9. Label=9
  - image 2517: Prediction=2. Label=2
@@ -2562,7 +2562,7 @@ Current batch: 21
  - image 2539: Prediction=7. Label=7
  - image 2540: Prediction=5. Label=5
  - image 2541: Prediction=1. Label=1
- - image 2542: Prediction=5. Label=6
+ - image 2542: Prediction=6. Label=6
  - image 2543: Prediction=8. Label=8
  - image 2544: Prediction=9. Label=9
  - image 2545: Prediction=5. Label=5
@@ -2651,7 +2651,7 @@ Current batch: 21
  - image 2628: Prediction=7. Label=7
  - image 2629: Prediction=3. Label=3
  - image 2630: Prediction=4. Label=4
- - image 2631: Prediction=6. Label=0
+ - image 2631: Prediction=0. Label=0
  - image 2632: Prediction=3. Label=3
  - image 2633: Prediction=9. Label=9
  - image 2634: Prediction=3. Label=3
@@ -2659,7 +2659,7 @@ Current batch: 21
  - image 2636: Prediction=8. Label=8
  - image 2637: Prediction=9. Label=9
  - image 2638: Prediction=0. Label=0
- - image 2639: Prediction=3. Label=3
+ - image 2639: Prediction=5. Label=3
 Current batch: 22
  - image 2640: Prediction=8. Label=8
  - image 2641: Prediction=0. Label=0
@@ -2672,7 +2672,7 @@ Current batch: 22
  - image 2648: Prediction=0. Label=9
  - image 2649: Prediction=0. Label=0
  - image 2650: Prediction=8. Label=8
- - image 2651: Prediction=6. Label=6
+ - image 2651: Prediction=5. Label=6
  - image 2652: Prediction=2. Label=2
  - image 2653: Prediction=5. Label=5
  - image 2654: Prediction=1. Label=6
@@ -2771,7 +2771,7 @@ Current batch: 22
  - image 2747: Prediction=0. Label=0
  - image 2748: Prediction=0. Label=0
  - image 2749: Prediction=7. Label=7
- - image 2750: Prediction=6. Label=6
+ - image 2750: Prediction=5. Label=6
  - image 2751: Prediction=6. Label=6
  - image 2752: Prediction=2. Label=2
  - image 2753: Prediction=1. Label=1
@@ -2793,7 +2793,7 @@ Current batch: 23
  - image 2768: Prediction=5. Label=5
  - image 2769: Prediction=9. Label=9
  - image 2770: Prediction=3. Label=3
- - image 2771: Prediction=9. Label=4
+ - image 2771: Prediction=4. Label=4
  - image 2772: Prediction=5. Label=5
  - image 2773: Prediction=5. Label=5
  - image 2774: Prediction=8. Label=8
@@ -2824,7 +2824,7 @@ Current batch: 23
  - image 2799: Prediction=3. Label=3
  - image 2800: Prediction=8. Label=8
  - image 2801: Prediction=6. Label=6
- - image 2802: Prediction=0. Label=2
+ - image 2802: Prediction=2. Label=2
  - image 2803: Prediction=1. Label=1
  - image 2804: Prediction=4. Label=4
  - image 2805: Prediction=5. Label=5
@@ -3086,7 +3086,7 @@ Current batch: 25
  - image 3059: Prediction=7. Label=7
  - image 3060: Prediction=7. Label=9
  - image 3061: Prediction=7. Label=7
- - image 3062: Prediction=8. Label=8
+ - image 3062: Prediction=5. Label=8
  - image 3063: Prediction=6. Label=6
  - image 3064: Prediction=8. Label=8
  - image 3065: Prediction=8. Label=8
@@ -3161,7 +3161,7 @@ Current batch: 26
  - image 3133: Prediction=4. Label=4
  - image 3134: Prediction=2. Label=2
  - image 3135: Prediction=6. Label=6
- - image 3136: Prediction=9. Label=7
+ - image 3136: Prediction=1. Label=7
  - image 3137: Prediction=4. Label=4
  - image 3138: Prediction=3. Label=3
  - image 3139: Prediction=8. Label=8
@@ -3192,7 +3192,7 @@ Current batch: 26
  - image 3164: Prediction=6. Label=6
  - image 3165: Prediction=9. Label=9
  - image 3166: Prediction=7. Label=7
- - image 3167: Prediction=1. Label=3
+ - image 3167: Prediction=3. Label=3
  - image 3168: Prediction=9. Label=9
  - image 3169: Prediction=4. Label=4
  - image 3170: Prediction=0. Label=0
@@ -3214,7 +3214,7 @@ Current batch: 26
  - image 3186: Prediction=8. Label=8
  - image 3187: Prediction=6. Label=6
  - image 3188: Prediction=4. Label=4
- - image 3189: Prediction=7. Label=7
+ - image 3189: Prediction=4. Label=7
  - image 3190: Prediction=9. Label=9
  - image 3191: Prediction=0. Label=0
  - image 3192: Prediction=7. Label=7
@@ -3295,7 +3295,7 @@ Current batch: 27
  - image 3266: Prediction=0. Label=0
  - image 3267: Prediction=2. Label=2
  - image 3268: Prediction=1. Label=1
- - image 3269: Prediction=0. Label=6
+ - image 3269: Prediction=6. Label=6
  - image 3270: Prediction=6. Label=6
  - image 3271: Prediction=0. Label=0
  - image 3272: Prediction=1. Label=1
@@ -3349,7 +3349,7 @@ Current batch: 27
  - image 3320: Prediction=1. Label=1
  - image 3321: Prediction=5. Label=5
  - image 3322: Prediction=0. Label=0
- - image 3323: Prediction=8. Label=8
+ - image 3323: Prediction=5. Label=8
  - image 3324: Prediction=8. Label=8
  - image 3325: Prediction=0. Label=0
  - image 3326: Prediction=3. Label=3
@@ -3396,7 +3396,7 @@ Current batch: 28
  - image 3366: Prediction=4. Label=4
  - image 3367: Prediction=2. Label=2
  - image 3368: Prediction=0. Label=0
- - image 3369: Prediction=9. Label=9
+ - image 3369: Prediction=1. Label=9
  - image 3370: Prediction=4. Label=4
  - image 3371: Prediction=0. Label=0
  - image 3372: Prediction=5. Label=5
@@ -3411,7 +3411,7 @@ Current batch: 28
  - image 3381: Prediction=3. Label=3
  - image 3382: Prediction=6. Label=6
  - image 3383: Prediction=6. Label=6
- - image 3384: Prediction=2. Label=2
+ - image 3384: Prediction=5. Label=2
  - image 3385: Prediction=9. Label=9
  - image 3386: Prediction=1. Label=1
  - image 3387: Prediction=9. Label=9
@@ -3502,7 +3502,7 @@ Current batch: 28
  - image 3472: Prediction=9. Label=9
  - image 3473: Prediction=8. Label=8
  - image 3474: Prediction=2. Label=2
- - image 3475: Prediction=7. Label=3
+ - image 3475: Prediction=3. Label=3
  - image 3476: Prediction=3. Label=3
  - image 3477: Prediction=9. Label=9
  - image 3478: Prediction=9. Label=9
@@ -3658,7 +3658,7 @@ Current batch: 30
  - image 3626: Prediction=8. Label=8
  - image 3627: Prediction=8. Label=8
  - image 3628: Prediction=2. Label=2
- - image 3629: Prediction=3. Label=8
+ - image 3629: Prediction=8. Label=8
  - image 3630: Prediction=3. Label=3
  - image 3631: Prediction=5. Label=5
  - image 3632: Prediction=7. Label=7
@@ -3799,7 +3799,7 @@ Current batch: 31
  - image 3766: Prediction=3. Label=3
  - image 3767: Prediction=2. Label=7
  - image 3768: Prediction=0. Label=0
- - image 3769: Prediction=9. Label=3
+ - image 3769: Prediction=3. Label=3
  - image 3770: Prediction=4. Label=4
  - image 3771: Prediction=8. Label=8
  - image 3772: Prediction=2. Label=2
@@ -3831,7 +3831,7 @@ Current batch: 31
  - image 3798: Prediction=9. Label=9
  - image 3799: Prediction=7. Label=7
  - image 3800: Prediction=6. Label=6
- - image 3801: Prediction=0. Label=6
+ - image 3801: Prediction=6. Label=6
  - image 3802: Prediction=2. Label=2
  - image 3803: Prediction=0. Label=0
  - image 3804: Prediction=0. Label=0
@@ -3879,7 +3879,7 @@ Current batch: 32
  - image 3845: Prediction=8. Label=8
  - image 3846: Prediction=6. Label=6
  - image 3847: Prediction=0. Label=0
- - image 3848: Prediction=3. Label=7
+ - image 3848: Prediction=7. Label=7
  - image 3849: Prediction=0. Label=0
  - image 3850: Prediction=9. Label=9
  - image 3851: Prediction=1. Label=1
@@ -3972,7 +3972,7 @@ Current batch: 32
  - image 3938: Prediction=4. Label=4
  - image 3939: Prediction=6. Label=6
  - image 3940: Prediction=0. Label=0
- - image 3941: Prediction=2. Label=4
+ - image 3941: Prediction=6. Label=4
  - image 3942: Prediction=0. Label=0
  - image 3943: Prediction=5. Label=3
  - image 3944: Prediction=3. Label=3
@@ -4017,7 +4017,7 @@ Current batch: 33
  - image 3982: Prediction=0. Label=0
  - image 3983: Prediction=1. Label=1
  - image 3984: Prediction=9. Label=9
- - image 3985: Prediction=9. Label=9
+ - image 3985: Prediction=4. Label=9
  - image 3986: Prediction=2. Label=2
  - image 3987: Prediction=8. Label=8
  - image 3988: Prediction=5. Label=8
@@ -4032,7 +4032,7 @@ Current batch: 33
  - image 3997: Prediction=7. Label=7
  - image 3998: Prediction=4. Label=4
  - image 3999: Prediction=9. Label=9
- - image 4000: Prediction=9. Label=9
+ - image 4000: Prediction=4. Label=9
  - image 4001: Prediction=4. Label=4
  - image 4002: Prediction=3. Label=3
  - image 4003: Prediction=6. Label=6
@@ -4049,7 +4049,7 @@ Current batch: 33
  - image 4014: Prediction=1. Label=1
  - image 4015: Prediction=9. Label=9
  - image 4016: Prediction=9. Label=9
- - image 4017: Prediction=9. Label=4
+ - image 4017: Prediction=4. Label=4
  - image 4018: Prediction=3. Label=3
  - image 4019: Prediction=6. Label=6
  - image 4020: Prediction=8. Label=8
@@ -4059,7 +4059,7 @@ Current batch: 33
  - image 4024: Prediction=4. Label=4
  - image 4025: Prediction=1. Label=1
  - image 4026: Prediction=3. Label=3
- - image 4027: Prediction=9. Label=7
+ - image 4027: Prediction=7. Label=7
  - image 4028: Prediction=7. Label=7
  - image 4029: Prediction=4. Label=4
  - image 4030: Prediction=9. Label=9
@@ -4097,7 +4097,7 @@ Current batch: 33
  - image 4062: Prediction=0. Label=0
  - image 4063: Prediction=5. Label=6
  - image 4064: Prediction=7. Label=7
- - image 4065: Prediction=5. Label=0
+ - image 4065: Prediction=2. Label=0
  - image 4066: Prediction=2. Label=2
  - image 4067: Prediction=5. Label=5
  - image 4068: Prediction=3. Label=8
@@ -4110,7 +4110,7 @@ Current batch: 33
  - image 4075: Prediction=5. Label=8
  - image 4076: Prediction=5. Label=5
  - image 4077: Prediction=1. Label=1
- - image 4078: Prediction=3. Label=9
+ - image 4078: Prediction=7. Label=9
  - image 4079: Prediction=0. Label=0
 Current batch: 34
  - image 4080: Prediction=0. Label=0
@@ -4126,14 +4126,14 @@ Current batch: 34
  - image 4090: Prediction=0. Label=0
  - image 4091: Prediction=0. Label=0
  - image 4092: Prediction=8. Label=8
- - image 4093: Prediction=9. Label=9
+ - image 4093: Prediction=4. Label=9
  - image 4094: Prediction=5. Label=5
  - image 4095: Prediction=9. Label=9
  - image 4096: Prediction=8. Label=8
  - image 4097: Prediction=3. Label=3
  - image 4098: Prediction=2. Label=2
  - image 4099: Prediction=7. Label=7
- - image 4100: Prediction=3. Label=2
+ - image 4100: Prediction=2. Label=2
  - image 4101: Prediction=9. Label=9
  - image 4102: Prediction=7. Label=7
  - image 4103: Prediction=2. Label=2
@@ -4161,7 +4161,7 @@ Current batch: 34
  - image 4125: Prediction=6. Label=6
  - image 4126: Prediction=8. Label=8
  - image 4127: Prediction=2. Label=2
- - image 4128: Prediction=3. Label=3
+ - image 4128: Prediction=5. Label=3
  - image 4129: Prediction=9. Label=9
  - image 4130: Prediction=7. Label=7
  - image 4131: Prediction=5. Label=5
@@ -4178,7 +4178,7 @@ Current batch: 34
  - image 4142: Prediction=7. Label=7
  - image 4143: Prediction=9. Label=9
  - image 4144: Prediction=1. Label=1
- - image 4145: Prediction=8. Label=8
+ - image 4145: Prediction=5. Label=8
  - image 4146: Prediction=0. Label=0
  - image 4147: Prediction=1. Label=1
  - image 4148: Prediction=7. Label=7
@@ -4187,16 +4187,16 @@ Current batch: 34
  - image 4151: Prediction=7. Label=7
  - image 4152: Prediction=1. Label=5
  - image 4153: Prediction=1. Label=1
- - image 4154: Prediction=9. Label=9
+ - image 4154: Prediction=4. Label=9
  - image 4155: Prediction=0. Label=0
- - image 4156: Prediction=8. Label=2
+ - image 4156: Prediction=2. Label=2
  - image 4157: Prediction=0. Label=0
  - image 4158: Prediction=9. Label=9
  - image 4159: Prediction=8. Label=8
  - image 4160: Prediction=6. Label=6
  - image 4161: Prediction=2. Label=2
  - image 4162: Prediction=3. Label=3
- - image 4163: Prediction=5. Label=9
+ - image 4163: Prediction=0. Label=9
  - image 4164: Prediction=3. Label=3
  - image 4165: Prediction=8. Label=8
  - image 4166: Prediction=0. Label=0
@@ -4239,7 +4239,7 @@ Current batch: 35
  - image 4202: Prediction=5. Label=5
  - image 4203: Prediction=6. Label=6
  - image 4204: Prediction=2. Label=2
- - image 4205: Prediction=2. Label=2
+ - image 4205: Prediction=1. Label=2
  - image 4206: Prediction=2. Label=2
  - image 4207: Prediction=8. Label=8
  - image 4208: Prediction=0. Label=0
@@ -4282,7 +4282,7 @@ Current batch: 35
  - image 4245: Prediction=9. Label=9
  - image 4246: Prediction=8. Label=8
  - image 4247: Prediction=2. Label=2
- - image 4248: Prediction=8. Label=2
+ - image 4248: Prediction=1. Label=2
  - image 4249: Prediction=1. Label=1
  - image 4250: Prediction=2. Label=2
  - image 4251: Prediction=8. Label=8
@@ -4347,7 +4347,7 @@ Current batch: 35
  - image 4310: Prediction=5. Label=5
  - image 4311: Prediction=5. Label=3
  - image 4312: Prediction=5. Label=5
- - image 4313: Prediction=9. Label=4
+ - image 4313: Prediction=4. Label=4
  - image 4314: Prediction=9. Label=9
  - image 4315: Prediction=5. Label=5
  - image 4316: Prediction=9. Label=9
@@ -4385,12 +4385,12 @@ Current batch: 36
  - image 4347: Prediction=6. Label=6
  - image 4348: Prediction=0. Label=0
  - image 4349: Prediction=1. Label=1
- - image 4350: Prediction=8. Label=2
+ - image 4350: Prediction=2. Label=2
  - image 4351: Prediction=0. Label=0
  - image 4352: Prediction=3. Label=3
  - image 4353: Prediction=0. Label=0
  - image 4354: Prediction=2. Label=2
- - image 4355: Prediction=9. Label=5
+ - image 4355: Prediction=5. Label=5
  - image 4356: Prediction=5. Label=5
  - image 4357: Prediction=7. Label=7
  - image 4358: Prediction=9. Label=9
@@ -4404,12 +4404,12 @@ Current batch: 36
  - image 4366: Prediction=3. Label=3
  - image 4367: Prediction=2. Label=2
  - image 4368: Prediction=5. Label=5
- - image 4369: Prediction=4. Label=9
+ - image 4369: Prediction=9. Label=9
  - image 4370: Prediction=0. Label=0
  - image 4371: Prediction=8. Label=8
  - image 4372: Prediction=8. Label=8
  - image 4373: Prediction=4. Label=4
- - image 4374: Prediction=6. Label=5
+ - image 4374: Prediction=5. Label=5
  - image 4375: Prediction=8. Label=8
  - image 4376: Prediction=8. Label=8
  - image 4377: Prediction=4. Label=4
@@ -4462,7 +4462,7 @@ Current batch: 36
  - image 4424: Prediction=9. Label=9
  - image 4425: Prediction=9. Label=9
  - image 4426: Prediction=9. Label=9
- - image 4427: Prediction=8. Label=2
+ - image 4427: Prediction=2. Label=2
  - image 4428: Prediction=1. Label=1
  - image 4429: Prediction=8. Label=8
  - image 4430: Prediction=3. Label=3
@@ -4513,7 +4513,7 @@ Current batch: 37
  - image 4474: Prediction=7. Label=7
  - image 4475: Prediction=4. Label=4
  - image 4476: Prediction=2. Label=2
- - image 4477: Prediction=0. Label=0
+ - image 4477: Prediction=5. Label=0
  - image 4478: Prediction=8. Label=8
  - image 4479: Prediction=9. Label=9
  - image 4480: Prediction=9. Label=9
@@ -4570,7 +4570,7 @@ Current batch: 37
  - image 4531: Prediction=0. Label=0
  - image 4532: Prediction=3. Label=3
  - image 4533: Prediction=1. Label=1
- - image 4534: Prediction=9. Label=9
+ - image 4534: Prediction=8. Label=9
  - image 4535: Prediction=3. Label=3
  - image 4536: Prediction=5. Label=6
  - image 4537: Prediction=3. Label=3
@@ -4604,7 +4604,7 @@ Current batch: 38
  - image 4564: Prediction=1. Label=1
  - image 4565: Prediction=6. Label=6
  - image 4566: Prediction=7. Label=7
- - image 4567: Prediction=9. Label=4
+ - image 4567: Prediction=4. Label=4
  - image 4568: Prediction=7. Label=7
  - image 4569: Prediction=5. Label=5
  - image 4570: Prediction=9. Label=9
@@ -4728,7 +4728,7 @@ Current batch: 39
  - image 4687: Prediction=1. Label=1
  - image 4688: Prediction=3. Label=3
  - image 4689: Prediction=5. Label=5
- - image 4690: Prediction=7. Label=7
+ - image 4690: Prediction=2. Label=7
  - image 4691: Prediction=1. Label=1
  - image 4692: Prediction=9. Label=9
  - image 4693: Prediction=7. Label=7
@@ -4773,7 +4773,7 @@ Current batch: 39
  - image 4732: Prediction=1. Label=1
  - image 4733: Prediction=1. Label=1
  - image 4734: Prediction=2. Label=2
- - image 4735: Prediction=9. Label=9
+ - image 4735: Prediction=4. Label=9
  - image 4736: Prediction=7. Label=7
  - image 4737: Prediction=8. Label=8
  - image 4738: Prediction=4. Label=4
@@ -4853,7 +4853,7 @@ Current batch: 40
  - image 4811: Prediction=7. Label=7
  - image 4812: Prediction=2. Label=2
  - image 4813: Prediction=4. Label=4
- - image 4814: Prediction=0. Label=6
+ - image 4814: Prediction=6. Label=6
  - image 4815: Prediction=7. Label=7
  - image 4816: Prediction=2. Label=2
  - image 4817: Prediction=8. Label=8
@@ -4876,7 +4876,7 @@ Current batch: 40
  - image 4834: Prediction=0. Label=0
  - image 4835: Prediction=9. Label=9
  - image 4836: Prediction=3. Label=3
- - image 4837: Prediction=1. Label=7
+ - image 4837: Prediction=2. Label=7
  - image 4838: Prediction=5. Label=6
  - image 4839: Prediction=8. Label=8
  - image 4840: Prediction=9. Label=9
@@ -4915,11 +4915,11 @@ Current batch: 40
  - image 4873: Prediction=3. Label=3
  - image 4874: Prediction=5. Label=9
  - image 4875: Prediction=6. Label=6
- - image 4876: Prediction=2. Label=2
+ - image 4876: Prediction=4. Label=2
  - image 4877: Prediction=1. Label=1
  - image 4878: Prediction=2. Label=2
- - image 4879: Prediction=6. Label=8
- - image 4880: Prediction=8. Label=0
+ - image 4879: Prediction=5. Label=8
+ - image 4880: Prediction=5. Label=0
  - image 4881: Prediction=7. Label=7
  - image 4882: Prediction=6. Label=6
  - image 4883: Prediction=6. Label=6
@@ -4981,9 +4981,9 @@ Current batch: 41
  - image 4938: Prediction=7. Label=7
  - image 4939: Prediction=2. Label=2
  - image 4940: Prediction=3. Label=3
- - image 4941: Prediction=3. Label=2
+ - image 4941: Prediction=2. Label=2
  - image 4942: Prediction=5. Label=5
- - image 4943: Prediction=8. Label=2
+ - image 4943: Prediction=2. Label=2
  - image 4944: Prediction=2. Label=2
  - image 4945: Prediction=9. Label=9
  - image 4946: Prediction=4. Label=4
@@ -5022,7 +5022,7 @@ Current batch: 41
  - image 4979: Prediction=5. Label=5
  - image 4980: Prediction=6. Label=6
  - image 4981: Prediction=3. Label=2
- - image 4982: Prediction=8. Label=8
+ - image 4982: Prediction=5. Label=8
  - image 4983: Prediction=3. Label=3
  - image 4984: Prediction=1. Label=1
  - image 4985: Prediction=2. Label=2
@@ -5035,9 +5035,9 @@ Current batch: 41
  - image 4992: Prediction=0. Label=0
  - image 4993: Prediction=7. Label=7
  - image 4994: Prediction=7. Label=7
- - image 4995: Prediction=3. Label=2
+ - image 4995: Prediction=2. Label=2
  - image 4996: Prediction=3. Label=3
- - image 4997: Prediction=3. Label=2
+ - image 4997: Prediction=2. Label=2
  - image 4998: Prediction=4. Label=4
  - image 4999: Prediction=0. Label=0
  - image 5000: Prediction=3. Label=3
@@ -5095,7 +5095,7 @@ Current batch: 42
  - image 5051: Prediction=0. Label=0
  - image 5052: Prediction=1. Label=1
  - image 5053: Prediction=2. Label=2
- - image 5054: Prediction=5. Label=3
+ - image 5054: Prediction=3. Label=3
  - image 5055: Prediction=4. Label=4
  - image 5056: Prediction=5. Label=5
  - image 5057: Prediction=6. Label=6
@@ -5109,7 +5109,7 @@ Current batch: 42
  - image 5065: Prediction=8. Label=8
  - image 5066: Prediction=6. Label=6
  - image 5067: Prediction=3. Label=3
- - image 5068: Prediction=1. Label=4
+ - image 5068: Prediction=4. Label=4
  - image 5069: Prediction=0. Label=0
  - image 5070: Prediction=9. Label=9
  - image 5071: Prediction=7. Label=7
@@ -5179,7 +5179,7 @@ Current batch: 42
  - image 5135: Prediction=9. Label=9
  - image 5136: Prediction=6. Label=6
  - image 5137: Prediction=9. Label=9
- - image 5138: Prediction=5. Label=8
+ - image 5138: Prediction=8. Label=8
  - image 5139: Prediction=0. Label=0
  - image 5140: Prediction=5. Label=3
  - image 5141: Prediction=0. Label=0
@@ -5207,7 +5207,7 @@ Current batch: 43
  - image 5162: Prediction=7. Label=7
  - image 5163: Prediction=8. Label=8
  - image 5164: Prediction=9. Label=9
- - image 5165: Prediction=5. Label=0
+ - image 5165: Prediction=0. Label=0
  - image 5166: Prediction=1. Label=1
  - image 5167: Prediction=2. Label=2
  - image 5168: Prediction=3. Label=3
@@ -5259,7 +5259,7 @@ Current batch: 43
  - image 5214: Prediction=3. Label=3
  - image 5215: Prediction=3. Label=3
  - image 5216: Prediction=2. Label=2
- - image 5217: Prediction=8. Label=2
+ - image 5217: Prediction=2. Label=2
  - image 5218: Prediction=6. Label=6
  - image 5219: Prediction=9. Label=9
  - image 5220: Prediction=9. Label=9
@@ -5607,7 +5607,7 @@ Current batch: 46
  - image 5559: Prediction=4. Label=4
  - image 5560: Prediction=7. Label=7
  - image 5561: Prediction=4. Label=4
- - image 5562: Prediction=8. Label=2
+ - image 5562: Prediction=2. Label=2
  - image 5563: Prediction=7. Label=7
  - image 5564: Prediction=4. Label=4
  - image 5565: Prediction=9. Label=9
@@ -5665,7 +5665,7 @@ Current batch: 46
  - image 5617: Prediction=4. Label=4
  - image 5618: Prediction=5. Label=5
  - image 5619: Prediction=6. Label=6
- - image 5620: Prediction=9. Label=7
+ - image 5620: Prediction=7. Label=7
  - image 5621: Prediction=8. Label=8
  - image 5622: Prediction=9. Label=9
  - image 5623: Prediction=5. Label=3
@@ -5695,7 +5695,7 @@ Current batch: 47
  - image 5646: Prediction=1. Label=1
  - image 5647: Prediction=8. Label=8
  - image 5648: Prediction=8. Label=8
- - image 5649: Prediction=9. Label=7
+ - image 5649: Prediction=7. Label=7
  - image 5650: Prediction=8. Label=8
  - image 5651: Prediction=1. Label=1
  - image 5652: Prediction=0. Label=0
@@ -5724,7 +5724,7 @@ Current batch: 47
  - image 5675: Prediction=8. Label=8
  - image 5676: Prediction=4. Label=4
  - image 5677: Prediction=4. Label=4
- - image 5678: Prediction=8. Label=8
+ - image 5678: Prediction=5. Label=8
  - image 5679: Prediction=1. Label=1
  - image 5680: Prediction=8. Label=8
  - image 5681: Prediction=6. Label=6
@@ -5734,7 +5734,7 @@ Current batch: 47
  - image 5685: Prediction=0. Label=0
  - image 5686: Prediction=0. Label=0
  - image 5687: Prediction=3. Label=3
- - image 5688: Prediction=9. Label=7
+ - image 5688: Prediction=7. Label=7
  - image 5689: Prediction=1. Label=1
  - image 5690: Prediction=6. Label=6
  - image 5691: Prediction=4. Label=4
@@ -5954,7 +5954,7 @@ Current batch: 49
  - image 5903: Prediction=7. Label=7
  - image 5904: Prediction=3. Label=3
  - image 5905: Prediction=8. Label=8
- - image 5906: Prediction=9. Label=7
+ - image 5906: Prediction=7. Label=7
  - image 5907: Prediction=2. Label=2
  - image 5908: Prediction=9. Label=9
  - image 5909: Prediction=6. Label=6
@@ -6064,7 +6064,7 @@ Current batch: 50
  - image 6012: Prediction=1. Label=1
  - image 6013: Prediction=4. Label=4
  - image 6014: Prediction=2. Label=2
- - image 6015: Prediction=0. Label=0
+ - image 6015: Prediction=5. Label=0
  - image 6016: Prediction=0. Label=0
  - image 6017: Prediction=7. Label=7
  - image 6018: Prediction=8. Label=8
@@ -6114,7 +6114,7 @@ Current batch: 50
  - image 6062: Prediction=0. Label=0
  - image 6063: Prediction=1. Label=1
  - image 6064: Prediction=2. Label=2
- - image 6065: Prediction=8. Label=3
+ - image 6065: Prediction=3. Label=3
  - image 6066: Prediction=4. Label=4
  - image 6067: Prediction=5. Label=5
  - image 6068: Prediction=6. Label=6
@@ -6130,7 +6130,7 @@ Current batch: 50
  - image 6078: Prediction=6. Label=6
  - image 6079: Prediction=7. Label=7
  - image 6080: Prediction=8. Label=8
- - image 6081: Prediction=5. Label=9
+ - image 6081: Prediction=9. Label=9
  - image 6082: Prediction=0. Label=0
  - image 6083: Prediction=1. Label=1
  - image 6084: Prediction=2. Label=2
@@ -6140,7 +6140,7 @@ Current batch: 50
  - image 6088: Prediction=6. Label=6
  - image 6089: Prediction=7. Label=7
  - image 6090: Prediction=8. Label=8
- - image 6091: Prediction=8. Label=9
+ - image 6091: Prediction=5. Label=9
  - image 6092: Prediction=1. Label=1
  - image 6093: Prediction=8. Label=2
  - image 6094: Prediction=6. Label=6
@@ -6207,7 +6207,7 @@ Current batch: 51
  - image 6154: Prediction=8. Label=8
  - image 6155: Prediction=5. Label=5
  - image 6156: Prediction=2. Label=2
- - image 6157: Prediction=5. Label=9
+ - image 6157: Prediction=9. Label=9
  - image 6158: Prediction=7. Label=7
  - image 6159: Prediction=1. Label=1
  - image 6160: Prediction=3. Label=3
@@ -6222,7 +6222,7 @@ Current batch: 51
  - image 6169: Prediction=4. Label=4
  - image 6170: Prediction=7. Label=7
  - image 6171: Prediction=7. Label=7
- - image 6172: Prediction=8. Label=9
+ - image 6172: Prediction=5. Label=9
  - image 6173: Prediction=9. Label=9
  - image 6174: Prediction=5. Label=3
  - image 6175: Prediction=4. Label=4
@@ -6398,7 +6398,7 @@ Current batch: 52
  - image 6344: Prediction=0. Label=0
  - image 6345: Prediction=2. Label=2
  - image 6346: Prediction=7. Label=7
- - image 6347: Prediction=6. Label=8
+ - image 6347: Prediction=5. Label=8
  - image 6348: Prediction=8. Label=8
  - image 6349: Prediction=3. Label=3
  - image 6350: Prediction=6. Label=6
@@ -6478,7 +6478,7 @@ Current batch: 53
  - image 6423: Prediction=2. Label=2
  - image 6424: Prediction=0. Label=0
  - image 6425: Prediction=6. Label=6
- - image 6426: Prediction=6. Label=0
+ - image 6426: Prediction=0. Label=0
  - image 6427: Prediction=4. Label=4
  - image 6428: Prediction=0. Label=0
  - image 6429: Prediction=0. Label=0
@@ -6507,7 +6507,7 @@ Current batch: 53
  - image 6452: Prediction=7. Label=7
  - image 6453: Prediction=5. Label=3
  - image 6454: Prediction=0. Label=0
- - image 6455: Prediction=5. Label=3
+ - image 6455: Prediction=3. Label=3
  - image 6456: Prediction=1. Label=1
  - image 6457: Prediction=8. Label=8
  - image 6458: Prediction=7. Label=7
@@ -6570,7 +6570,7 @@ Current batch: 54
  - image 6514: Prediction=8. Label=8
  - image 6515: Prediction=1. Label=1
  - image 6516: Prediction=4. Label=4
- - image 6517: Prediction=5. Label=3
+ - image 6517: Prediction=3. Label=3
  - image 6518: Prediction=5. Label=5
  - image 6519: Prediction=2. Label=2
  - image 6520: Prediction=9. Label=9
@@ -6613,7 +6613,7 @@ Current batch: 54
  - image 6557: Prediction=0. Label=0
  - image 6558: Prediction=6. Label=6
  - image 6559: Prediction=4. Label=4
- - image 6560: Prediction=3. Label=9
+ - image 6560: Prediction=9. Label=9
  - image 6561: Prediction=7. Label=7
  - image 6562: Prediction=2. Label=2
  - image 6563: Prediction=3. Label=3
@@ -6679,14 +6679,14 @@ Current batch: 55
  - image 6622: Prediction=1. Label=1
  - image 6623: Prediction=1. Label=1
  - image 6624: Prediction=5. Label=3
- - image 6625: Prediction=4. Label=8
+ - image 6625: Prediction=8. Label=8
  - image 6626: Prediction=4. Label=4
  - image 6627: Prediction=9. Label=9
  - image 6628: Prediction=1. Label=1
  - image 6629: Prediction=8. Label=8
  - image 6630: Prediction=6. Label=6
  - image 6631: Prediction=8. Label=8
- - image 6632: Prediction=9. Label=9
+ - image 6632: Prediction=5. Label=9
  - image 6633: Prediction=0. Label=0
  - image 6634: Prediction=1. Label=1
  - image 6635: Prediction=2. Label=2
@@ -6790,7 +6790,7 @@ Current batch: 56
  - image 6732: Prediction=2. Label=2
  - image 6733: Prediction=1. Label=1
  - image 6734: Prediction=4. Label=4
- - image 6735: Prediction=5. Label=8
+ - image 6735: Prediction=8. Label=8
  - image 6736: Prediction=3. Label=3
  - image 6737: Prediction=4. Label=4
  - image 6738: Prediction=4. Label=4
@@ -6840,7 +6840,7 @@ Current batch: 56
  - image 6782: Prediction=6. Label=6
  - image 6783: Prediction=1. Label=1
  - image 6784: Prediction=9. Label=9
- - image 6785: Prediction=4. Label=2
+ - image 6785: Prediction=2. Label=2
  - image 6786: Prediction=0. Label=0
  - image 6787: Prediction=9. Label=9
  - image 6788: Prediction=5. Label=5
@@ -6962,7 +6962,7 @@ Current batch: 57
  - image 6903: Prediction=9. Label=9
  - image 6904: Prediction=8. Label=8
  - image 6905: Prediction=9. Label=9
- - image 6906: Prediction=6. Label=2
+ - image 6906: Prediction=2. Label=2
  - image 6907: Prediction=3. Label=3
  - image 6908: Prediction=5. Label=5
  - image 6909: Prediction=5. Label=5
@@ -6982,7 +6982,7 @@ Current batch: 57
  - image 6923: Prediction=0. Label=0
  - image 6924: Prediction=4. Label=4
  - image 6925: Prediction=0. Label=0
- - image 6926: Prediction=4. Label=6
+ - image 6926: Prediction=6. Label=6
  - image 6927: Prediction=0. Label=0
  - image 6928: Prediction=1. Label=1
  - image 6929: Prediction=2. Label=2
@@ -7179,7 +7179,7 @@ Current batch: 59
  - image 7118: Prediction=9. Label=9
  - image 7119: Prediction=3. Label=3
  - image 7120: Prediction=2. Label=2
- - image 7121: Prediction=9. Label=8
+ - image 7121: Prediction=8. Label=8
  - image 7122: Prediction=6. Label=6
  - image 7123: Prediction=1. Label=1
  - image 7124: Prediction=7. Label=7
@@ -7188,7 +7188,7 @@ Current batch: 59
  - image 7127: Prediction=8. Label=8
  - image 7128: Prediction=9. Label=9
  - image 7129: Prediction=0. Label=0
- - image 7130: Prediction=8. Label=3
+ - image 7130: Prediction=3. Label=3
  - image 7131: Prediction=3. Label=3
  - image 7132: Prediction=9. Label=9
  - image 7133: Prediction=0. Label=0
@@ -7512,7 +7512,7 @@ Current batch: 62
  - image 7448: Prediction=5. Label=5
  - image 7449: Prediction=0. Label=0
  - image 7450: Prediction=8. Label=8
- - image 7451: Prediction=6. Label=5
+ - image 7451: Prediction=5. Label=5
  - image 7452: Prediction=0. Label=0
  - image 7453: Prediction=1. Label=1
  - image 7454: Prediction=5. Label=5
@@ -7553,7 +7553,7 @@ Current batch: 62
  - image 7489: Prediction=9. Label=9
  - image 7490: Prediction=7. Label=7
  - image 7491: Prediction=0. Label=0
- - image 7492: Prediction=7. Label=2
+ - image 7492: Prediction=2. Label=2
  - image 7493: Prediction=7. Label=7
  - image 7494: Prediction=4. Label=4
  - image 7495: Prediction=9. Label=9
@@ -7887,7 +7887,7 @@ Current batch: 65
  - image 7820: Prediction=0. Label=0
  - image 7821: Prediction=2. Label=3
  - image 7822: Prediction=1. Label=1
- - image 7823: Prediction=8. Label=8
+ - image 7823: Prediction=5. Label=8
  - image 7824: Prediction=6. Label=6
  - image 7825: Prediction=7. Label=7
  - image 7826: Prediction=5. Label=5
@@ -7963,7 +7963,7 @@ Current batch: 65
  - image 7896: Prediction=1. Label=1
  - image 7897: Prediction=6. Label=6
  - image 7898: Prediction=0. Label=0
- - image 7899: Prediction=8. Label=1
+ - image 7899: Prediction=1. Label=1
  - image 7900: Prediction=1. Label=1
  - image 7901: Prediction=8. Label=8
  - image 7902: Prediction=7. Label=7
@@ -7981,7 +7981,7 @@ Current batch: 65
  - image 7914: Prediction=6. Label=6
  - image 7915: Prediction=7. Label=7
  - image 7916: Prediction=1. Label=1
- - image 7917: Prediction=4. Label=2
+ - image 7917: Prediction=2. Label=2
  - image 7918: Prediction=5. Label=5
  - image 7919: Prediction=8. Label=8
 Current batch: 66
@@ -8055,7 +8055,7 @@ Current batch: 66
  - image 7987: Prediction=0. Label=0
  - image 7988: Prediction=5. Label=5
  - image 7989: Prediction=0. Label=0
- - image 7990: Prediction=1. Label=1
+ - image 7990: Prediction=8. Label=1
  - image 7991: Prediction=9. Label=9
  - image 7992: Prediction=2. Label=2
  - image 7993: Prediction=3. Label=3
@@ -8128,7 +8128,7 @@ Current batch: 67
  - image 8059: Prediction=1. Label=2
  - image 8060: Prediction=3. Label=3
  - image 8061: Prediction=4. Label=4
- - image 8062: Prediction=5. Label=5
+ - image 8062: Prediction=8. Label=5
  - image 8063: Prediction=6. Label=6
  - image 8064: Prediction=7. Label=7
  - image 8065: Prediction=8. Label=8
@@ -8147,7 +8147,7 @@ Current batch: 67
  - image 8078: Prediction=1. Label=1
  - image 8079: Prediction=2. Label=2
  - image 8080: Prediction=3. Label=3
- - image 8081: Prediction=6. Label=4
+ - image 8081: Prediction=4. Label=4
  - image 8082: Prediction=5. Label=5
  - image 8083: Prediction=6. Label=6
  - image 8084: Prediction=9. Label=9
@@ -8181,7 +8181,7 @@ Current batch: 67
  - image 8112: Prediction=2. Label=2
  - image 8113: Prediction=1. Label=1
  - image 8114: Prediction=0. Label=0
- - image 8115: Prediction=3. Label=3
+ - image 8115: Prediction=5. Label=3
  - image 8116: Prediction=6. Label=6
  - image 8117: Prediction=0. Label=0
  - image 8118: Prediction=1. Label=1
@@ -8339,7 +8339,7 @@ Current batch: 68
  - image 8269: Prediction=4. Label=4
  - image 8270: Prediction=5. Label=5
  - image 8271: Prediction=3. Label=3
- - image 8272: Prediction=5. Label=3
+ - image 8272: Prediction=3. Label=3
  - image 8273: Prediction=0. Label=0
  - image 8274: Prediction=9. Label=9
  - image 8275: Prediction=5. Label=5
@@ -8358,10 +8358,10 @@ Current batch: 69
  - image 8287: Prediction=6. Label=6
  - image 8288: Prediction=9. Label=9
  - image 8289: Prediction=1. Label=1
- - image 8290: Prediction=5. Label=3
+ - image 8290: Prediction=3. Label=3
  - image 8291: Prediction=6. Label=6
  - image 8292: Prediction=2. Label=2
- - image 8293: Prediction=9. Label=3
+ - image 8293: Prediction=3. Label=3
  - image 8294: Prediction=8. Label=8
  - image 8295: Prediction=2. Label=2
  - image 8296: Prediction=3. Label=3
@@ -8393,7 +8393,7 @@ Current batch: 69
  - image 8322: Prediction=9. Label=9
  - image 8323: Prediction=2. Label=2
  - image 8324: Prediction=1. Label=1
- - image 8325: Prediction=0. Label=0
+ - image 8325: Prediction=5. Label=0
  - image 8326: Prediction=6. Label=6
  - image 8327: Prediction=5. Label=5
  - image 8328: Prediction=3. Label=3
@@ -8447,7 +8447,7 @@ Current batch: 69
  - image 8376: Prediction=1. Label=1
  - image 8377: Prediction=6. Label=6
  - image 8378: Prediction=4. Label=4
- - image 8379: Prediction=5. Label=3
+ - image 8379: Prediction=3. Label=3
  - image 8380: Prediction=6. Label=6
  - image 8381: Prediction=2. Label=2
  - image 8382: Prediction=0. Label=0
@@ -8477,12 +8477,12 @@ Current batch: 70
  - image 8405: Prediction=8. Label=8
  - image 8406: Prediction=9. Label=4
  - image 8407: Prediction=3. Label=3
- - image 8408: Prediction=6. Label=8
+ - image 8408: Prediction=5. Label=8
  - image 8409: Prediction=2. Label=2
- - image 8410: Prediction=6. Label=8
+ - image 8410: Prediction=5. Label=8
  - image 8411: Prediction=3. Label=3
  - image 8412: Prediction=5. Label=5
- - image 8413: Prediction=5. Label=8
+ - image 8413: Prediction=8. Label=8
  - image 8414: Prediction=0. Label=0
  - image 8415: Prediction=5. Label=5
  - image 8416: Prediction=4. Label=4
@@ -8573,7 +8573,7 @@ Current batch: 70
  - image 8501: Prediction=0. Label=0
  - image 8502: Prediction=5. Label=5
  - image 8503: Prediction=9. Label=9
- - image 8504: Prediction=9. Label=9
+ - image 8504: Prediction=5. Label=9
  - image 8505: Prediction=8. Label=8
  - image 8506: Prediction=9. Label=9
  - image 8507: Prediction=5. Label=5
@@ -8677,7 +8677,7 @@ Current batch: 71
  - image 8604: Prediction=1. Label=1
  - image 8605: Prediction=6. Label=6
  - image 8606: Prediction=7. Label=7
- - image 8607: Prediction=3. Label=3
+ - image 8607: Prediction=5. Label=3
  - image 8608: Prediction=7. Label=7
  - image 8609: Prediction=8. Label=8
  - image 8610: Prediction=4. Label=4
@@ -9084,7 +9084,7 @@ Current batch: 75
  - image 9007: Prediction=3. Label=3
  - image 9008: Prediction=4. Label=4
  - image 9009: Prediction=2. Label=7
- - image 9010: Prediction=8. Label=2
+ - image 9010: Prediction=2. Label=2
  - image 9011: Prediction=3. Label=3
  - image 9012: Prediction=4. Label=4
  - image 9013: Prediction=5. Label=5
@@ -9119,7 +9119,7 @@ Current batch: 75
  - image 9042: Prediction=8. Label=8
  - image 9043: Prediction=2. Label=2
  - image 9044: Prediction=7. Label=7
- - image 9045: Prediction=7. Label=7
+ - image 9045: Prediction=2. Label=7
  - image 9046: Prediction=2. Label=2
  - image 9047: Prediction=4. Label=4
  - image 9048: Prediction=2. Label=2
@@ -9257,7 +9257,7 @@ Current batch: 76
  - image 9179: Prediction=0. Label=0
  - image 9180: Prediction=1. Label=1
  - image 9181: Prediction=2. Label=2
- - image 9182: Prediction=9. Label=3
+ - image 9182: Prediction=3. Label=3
  - image 9183: Prediction=4. Label=4
  - image 9184: Prediction=5. Label=5
  - image 9185: Prediction=6. Label=6
@@ -9286,7 +9286,7 @@ Current batch: 76
  - image 9208: Prediction=4. Label=4
  - image 9209: Prediction=2. Label=2
  - image 9210: Prediction=6. Label=6
- - image 9211: Prediction=9. Label=4
+ - image 9211: Prediction=4. Label=4
  - image 9212: Prediction=7. Label=7
  - image 9213: Prediction=8. Label=8
  - image 9214: Prediction=9. Label=9
@@ -9306,7 +9306,7 @@ Current batch: 76
  - image 9228: Prediction=5. Label=5
  - image 9229: Prediction=3. Label=3
  - image 9230: Prediction=0. Label=0
- - image 9231: Prediction=3. Label=3
+ - image 9231: Prediction=5. Label=3
  - image 9232: Prediction=4. Label=4
  - image 9233: Prediction=1. Label=1
  - image 9234: Prediction=5. Label=5
@@ -9392,7 +9392,7 @@ Current batch: 77
  - image 9313: Prediction=1. Label=1
  - image 9314: Prediction=7. Label=7
  - image 9315: Prediction=5. Label=5
- - image 9316: Prediction=3. Label=8
+ - image 9316: Prediction=5. Label=8
  - image 9317: Prediction=6. Label=6
  - image 9318: Prediction=2. Label=2
  - image 9319: Prediction=9. Label=9
@@ -9586,7 +9586,7 @@ Current batch: 79
  - image 9505: Prediction=7. Label=7
  - image 9506: Prediction=8. Label=8
  - image 9507: Prediction=9. Label=9
- - image 9508: Prediction=7. Label=0
+ - image 9508: Prediction=0. Label=0
  - image 9509: Prediction=1. Label=1
  - image 9510: Prediction=2. Label=2
  - image 9511: Prediction=3. Label=3
@@ -9722,7 +9722,7 @@ Current batch: 80
  - image 9640: Prediction=7. Label=7
  - image 9641: Prediction=1. Label=1
  - image 9642: Prediction=7. Label=9
- - image 9643: Prediction=7. Label=1
+ - image 9643: Prediction=1. Label=1
  - image 9644: Prediction=7. Label=7
  - image 9645: Prediction=1. Label=1
  - image 9646: Prediction=4. Label=4
@@ -9775,7 +9775,7 @@ Current batch: 80
  - image 9693: Prediction=6. Label=6
  - image 9694: Prediction=8. Label=8
  - image 9695: Prediction=8. Label=8
- - image 9696: Prediction=1. Label=2
+ - image 9696: Prediction=2. Label=2
  - image 9697: Prediction=3. Label=3
  - image 9698: Prediction=5. Label=6
  - image 9699: Prediction=1. Label=1
@@ -9791,7 +9791,7 @@ Current batch: 80
  - image 9709: Prediction=5. Label=5
  - image 9710: Prediction=6. Label=6
  - image 9711: Prediction=7. Label=7
- - image 9712: Prediction=5. Label=8
+ - image 9712: Prediction=8. Label=8
  - image 9713: Prediction=9. Label=9
  - image 9714: Prediction=0. Label=0
  - image 9715: Prediction=1. Label=1
@@ -9813,7 +9813,7 @@ Current batch: 81
  - image 9730: Prediction=6. Label=6
  - image 9731: Prediction=7. Label=7
  - image 9732: Prediction=8. Label=8
- - image 9733: Prediction=9. Label=9
+ - image 9733: Prediction=8. Label=9
  - image 9734: Prediction=7. Label=7
  - image 9735: Prediction=4. Label=4
  - image 9736: Prediction=6. Label=6
@@ -9821,7 +9821,7 @@ Current batch: 81
  - image 9738: Prediction=4. Label=4
  - image 9739: Prediction=0. Label=0
  - image 9740: Prediction=9. Label=9
- - image 9741: Prediction=9. Label=9
+ - image 9741: Prediction=7. Label=9
  - image 9742: Prediction=3. Label=3
  - image 9743: Prediction=7. Label=7
  - image 9744: Prediction=1. Label=8
@@ -9844,7 +9844,7 @@ Current batch: 81
  - image 9761: Prediction=0. Label=0
  - image 9762: Prediction=3. Label=3
  - image 9763: Prediction=0. Label=0
- - image 9764: Prediction=9. Label=4
+ - image 9764: Prediction=4. Label=4
  - image 9765: Prediction=7. Label=7
  - image 9766: Prediction=4. Label=4
  - image 9767: Prediction=9. Label=9
@@ -9860,9 +9860,9 @@ Current batch: 81
  - image 9777: Prediction=5. Label=5
  - image 9778: Prediction=6. Label=6
  - image 9779: Prediction=0. Label=2
- - image 9780: Prediction=5. Label=8
+ - image 9780: Prediction=8. Label=8
  - image 9781: Prediction=7. Label=7
- - image 9782: Prediction=5. Label=6
+ - image 9782: Prediction=6. Label=6
  - image 9783: Prediction=4. Label=4
  - image 9784: Prediction=9. Label=9
  - image 9785: Prediction=9. Label=9
@@ -9912,9 +9912,9 @@ Current batch: 81
  - image 9829: Prediction=9. Label=9
  - image 9830: Prediction=5. Label=5
  - image 9831: Prediction=5. Label=5
- - image 9832: Prediction=8. Label=2
+ - image 9832: Prediction=5. Label=2
  - image 9833: Prediction=6. Label=6
- - image 9834: Prediction=8. Label=8
+ - image 9834: Prediction=5. Label=8
  - image 9835: Prediction=4. Label=4
  - image 9836: Prediction=1. Label=1
  - image 9837: Prediction=7. Label=7
@@ -9937,7 +9937,7 @@ Current batch: 82
  - image 9853: Prediction=5. Label=5
  - image 9854: Prediction=8. Label=8
  - image 9855: Prediction=2. Label=2
- - image 9856: Prediction=9. Label=9
+ - image 9856: Prediction=5. Label=9
  - image 9857: Prediction=8. Label=8
  - image 9858: Prediction=8. Label=6
  - image 9859: Prediction=7. Label=7
@@ -10064,11 +10064,11 @@ Current batch: 83
  - image 9979: Prediction=7. Label=7
  - image 9980: Prediction=3. Label=2
  - image 9981: Prediction=6. Label=6
- - image 9982: Prediction=6. Label=5
+ - image 9982: Prediction=5. Label=5
  - image 9983: Prediction=0. Label=0
  - image 9984: Prediction=1. Label=1
  - image 9985: Prediction=2. Label=2
- - image 9986: Prediction=8. Label=3
+ - image 9986: Prediction=3. Label=3
  - image 9987: Prediction=4. Label=4
  - image 9988: Prediction=5. Label=5
  - image 9989: Prediction=6. Label=6
