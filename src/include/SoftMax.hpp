@@ -8,7 +8,7 @@ using Tensor = Eigen::MatrixXd;
 class SoftMax final : public BaseLayer
 {
 private:
-    Tensor input_tensor_cache;
+  Tensor y_hat;
 
 public:
     SoftMax() : BaseLayer() {}
@@ -27,9 +27,10 @@ public:
     {
         // Shift for numerical stability
         Tensor x_shifted = input_tensor.colwise() - input_tensor.rowwise().maxCoeff();
-        Tensor input_tensor_exp = x_shifted.array().exp();
-        this->input_tensor_cache = input_tensor_exp.array().colwise() / input_tensor_exp.array().rowwise().sum();
-        return this->input_tensor_cache;
+        Tensor e_x = x_shifted.array().exp();
+        // y_hat.(rows, cols) = (batch_size, output_size)
+        this->y_hat = e_x.array().colwise() / e_x.array().rowwise().sum();
+        return this->y_hat;
     }
 
     /**
@@ -43,13 +44,17 @@ public:
      */
     Tensor backward(const Tensor &error_tensor) override
     {
+        // error_tensor.(rows, cols) = (batch_size, output_size)
+
         // Calculate the gradient of the loss with respect to input
-        Tensor weighted_sum_error = (error_tensor.array() * input_tensor_cache.array()).rowwise().sum();
+        // weighted_sum_error.(rows, cols) = (batch_size, 1)
+        Tensor weighted_sum_error = (error_tensor.array() * y_hat.array()).rowwise().sum();
 
         // Transform the sum back to the forwarded shape and subtract it from each error_tensor element
-        Tensor adjusted_error = error_tensor.array() - (weighted_sum_error.replicate(1, error_tensor.cols())).array();
+        Tensor adjusted_error = error_tensor - (weighted_sum_error.replicate(1, error_tensor.cols()));
 
-        // Perform the final element-wise multiplication with input_tensor_cache y_hat
-        return input_tensor_cache.array() * adjusted_error.array();
+        // Perform the final element-wise multiplication with y_hat
+        // return.(rows, cols) = (batch_size, output_size)
+        return y_hat.array() * adjusted_error.array();
     }
 };

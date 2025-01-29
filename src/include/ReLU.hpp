@@ -8,7 +8,7 @@ using Tensor = Eigen::MatrixXd;
 class ReLU final : public BaseLayer
 {
 private:
-    Tensor relu_cache;
+  Tensor mask;
 
 public:
     ReLU() : BaseLayer() {}
@@ -23,7 +23,7 @@ public:
      */
     Tensor forward(const Tensor &input_tensor) override
     {
-        this->relu_cache = (input_tensor.array() > 0).cast<double>();
+        this->mask = (input_tensor.array() > 0).cast<double>();
         return input_tensor.cwiseMax(0.0);
     }
 
@@ -36,8 +36,5 @@ public:
      * @param error_tensor Error tensor from the successor layer
      * @return Tensor
      */
-    Tensor backward(const Tensor &error_tensor) override
-    {
-        return error_tensor.cwiseProduct(this->relu_cache);
-    }
+    Tensor backward(const Tensor &error_tensor) override { return error_tensor.array() * mask.array(); }
 };

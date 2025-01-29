@@ -1,9 +1,9 @@
 #pragma once
 
 #include "BaseLayer.hpp"
-#include "Optimizers.hpp"
-#include "Initializers.hpp"
 #include "Eigen/Dense"
+#include "Initializers.hpp"
+#include "Optimizers.hpp"
 
 using Tensor = Eigen::MatrixXd;
 
@@ -65,14 +65,15 @@ public:
     }
 
     /**
-     * @author Hamiz Ali, , Lam Tran
+     * @author Hamiz Ali, Lam Tran
      * @since 24-01-2025
      * @brief Backward pass through the fully connected layer
-     * @param error_tensor
+     * @param error_tensor Error tensor from the successor layer; (rows, cols) = (batch_size, output_size/hidden_size)
      * @return Tensor
      */
     Tensor backward(const Tensor &error_tensor) override
     {
+        // gradient_weights.(rows, cols) = weights.(rows, cols)
         Tensor gradient_weights = input_tensor_w_bias.transpose() * error_tensor;
         this->weights = optimizer->updateWeights(this->weights, gradient_weights);
         Tensor weights_no_bias = this->weights.topRows(this->weights.rows() - 1);
