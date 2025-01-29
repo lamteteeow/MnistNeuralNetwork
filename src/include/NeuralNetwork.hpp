@@ -75,6 +75,59 @@ class NeuralNetwork {
         fc2->initialize(weights_initializer, bias_initializer);
     }
 
+    // // Augment data by applying shifting
+    // Tensor shift_augment(const Tensor &input_tensor) {
+    //     Tensor augmented_input_tensor = input_tensor;
+    //     int direction = rand() % 4; // 0: up, 1: down, 2: left, 3: right
+    //     int img_length = sqrt(input_tensor.cols());
+
+    //     for (int i = 0; i < input_tensor.rows(); i++) {
+    //         Tensor img = input_tensor.row(i);
+    //         Tensor shifted = Tensor::Zero(1, input_tensor.cols());
+
+    //         for (int r = 0; r < img_length; r++) {
+    //             for (int c = 0; c < img_length; c++) {
+    //                 int new_r = r, new_c = c;
+    //                 switch (direction) {
+    //                 case 0: // up
+    //                     new_r = (r + 1) % img_length;
+    //                     break;
+    //                 case 1: // down
+    //                     new_r = (r - 1 + img_length) % img_length;
+    //                     break;
+    //                 case 2: // left
+    //                     new_c = (c + 1) % img_length;
+    //                     break;
+    //                 case 3: // right
+    //                     new_c = (c - 1 + img_length) % img_length;
+    //                     break;
+    //                 }
+    //                 shifted(0, new_r * img_length + new_c) = img(0, r * img_length + c);
+    //             }
+    //         }
+    //         augmented_input_tensor.row(i) = shifted;
+    //     }
+    //     return augmented_input_tensor;
+    // }
+
+    // // Shuffle data
+    // void shuffle(Tensor &input_tensor, Tensor &label_tensor) {
+    //     std::vector<int> indices(input_tensor.rows());
+    //     std::iota(indices.begin(), indices.end(), 0);
+    //     std::random_shuffle(indices.begin(), indices.end());
+
+    //     Tensor shuffled_input_tensor = Tensor::Zero(input_tensor.rows(), input_tensor.cols());
+    //     Tensor shuffled_label_tensor = Tensor::Zero(label_tensor.rows(), label_tensor.cols());
+
+    //     for (int i = 0; i < input_tensor.rows(); i++) {
+    //         shuffled_input_tensor.row(i) = input_tensor.row(indices[i]);
+    //         shuffled_label_tensor.row(i) = label_tensor.row(indices[i]);
+    //     }
+
+    //     input_tensor = shuffled_input_tensor;
+    //     label_tensor = shuffled_label_tensor;
+    // }
+
     /**
      * @author Hamiz Ali
      * @since 24.01.2025
@@ -145,8 +198,8 @@ class NeuralNetwork {
 
             for (int i = 0; i < predictions.rows(); i++) {
                 int predicted_label = 0, actual_label = 0;
-                predictions.row(i).maxCoeff(&predicted_label); // Get predicted class
-                batch_labels.row(i).maxCoeff(&actual_label);   // Get actual class
+                predictions.row(i).maxCoeff(&predicted_label); // Get predicted class based on one-hot encoding
+                batch_labels.row(i).maxCoeff(&actual_label);   // Get actual class based on one-hot encoding
 
                 log_stream << " - image " << (batch_start + i) << ": Prediction=" << predicted_label
                            << ". Label=" << actual_label << std::endl;
@@ -173,7 +226,9 @@ class NeuralNetwork {
      */
     void fit(const Tensor &train_images, const Tensor &train_labels, unsigned int num_epochs, unsigned int batch_size) {
         for (unsigned int epoch = 0; epoch < num_epochs; ++epoch) {
-            int batch_num = 1;
+            // int batch_num = 1;
+            // shift_augment(train_images);
+            // shift_augment(train_labels);
             double batch_loss = 0.0;
             for (int i = 0; i < train_images.rows(); i += batch_size) {
                 Tensor batch_images =
@@ -182,8 +237,9 @@ class NeuralNetwork {
                     train_labels.middleRows(i, std::min(batch_size, (unsigned int)train_labels.rows() - i));
                 batch_loss = (train(batch_images, batch_labels) / batch_images.rows());
 
-                std::cout << "Current batch: " << batch_num << " " << "Batch Loss: " << batch_loss << std::endl;
-                batch_num++;
+                std::cout << "Current batch: " << ((i % batch_size) + 1) << " " << "Batch Loss: " << batch_loss
+                          << std::endl;
+                // batch_num++;
             }
 
             std::cout << "Epoch: " << epoch << " done." << std::endl;

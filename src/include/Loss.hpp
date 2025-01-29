@@ -3,7 +3,7 @@
 #include "BaseLayer.hpp"
 #include "Eigen/Dense"
 
-#define EPSILON 1e-10
+#define EPSILON 1e-12
 
 using Tensor = Eigen::MatrixXd;
 
