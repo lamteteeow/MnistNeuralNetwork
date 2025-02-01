@@ -1,5 +1,6 @@
 # AdvPT Project WS 2024: Handwriting Recognition (MNIST)
->[!info] at FAU Erlangen - Nuremberg
+> from `Advance Programming Techniques` course
+> at `FAU Erlangen-Nuremberg`
 
 This project template contains some files to get your project started.
 
