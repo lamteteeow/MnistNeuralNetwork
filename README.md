@@ -1,4 +1,5 @@
-# AdvPT Project WS 2023: Handwriting Recognition (MNIST)
+# AdvPT Project WS 2024: Handwriting Recognition (MNIST)
+>[!info] at FAU Erlangen - Nuremberg
 
 This project template contains some files to get your project started.
 
