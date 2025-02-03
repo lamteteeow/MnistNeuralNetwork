@@ -26,9 +26,9 @@ class NeuralNetwork {
     FullyConnected *fc2;
     SoftMax *softmax;
     CrossEntropyLoss *loss;
-    Optimizer *optimizer;
-    // Optimizer *optimizer1;
-    // Optimizer *optimizer2;
+    // Optimizer *optimizer;
+    Optimizer *optimizer1;
+    Optimizer *optimizer2;
     Initializer *weights_initializer;
     Initializer *bias_initializer;
 
@@ -39,8 +39,8 @@ class NeuralNetwork {
 
   public:
     /**
-     * @author Hamiz Ali
-     * @since 24.01.2025
+     * @author Hamiz Ali, Lam Tran
+     * @since 29.01.2025
      *
      * @brief Construct a new Neural Network object
      *
@@ -53,18 +53,18 @@ class NeuralNetwork {
         : input_size(input_size), hidden_size(hidden_size), output_size(output_size), learning_rate(learning_rate) {
         // Initialize optimizer and initializers
         unsigned long seed = 12345;
-        optimizer = new SGD(learning_rate);
-        // optimizer1 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
+        // optimizer = new SGD(learning_rate);
+        optimizer1 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
         // optimizer1 = new SGD(learning_rate);
-        // optimizer2 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
+        optimizer2 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
         // optimizer2 = new SGD(learning_rate);
         weights_initializer = new Xavier(seed);
         bias_initializer = new Xavier(seed);
 
         // Initialize layers
-        fc1 = new FullyConnected(input_size, hidden_size, optimizer);
+        fc1 = new FullyConnected(input_size, hidden_size, optimizer1);
         relu = new ReLU();
-        fc2 = new FullyConnected(hidden_size, output_size, optimizer);
+        fc2 = new FullyConnected(hidden_size, output_size, optimizer2);
         softmax = new SoftMax();
         loss = new CrossEntropyLoss();
 
@@ -252,9 +252,9 @@ class NeuralNetwork {
         delete fc2;
         delete softmax;
         delete loss;
-        delete optimizer;
-        // delete optimizer1;
-        // delete optimizer2;
+        // delete optimizer;
+        delete optimizer1;
+        delete optimizer2;
         delete weights_initializer;
         delete bias_initializer;
     }

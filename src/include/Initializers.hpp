@@ -29,28 +29,21 @@ private:
 public:
   Xavier(unsigned long seed = 0) : Initializer(seed), gen(seed) {}
 
-  /**
-   * @author Lam Tran, Hamiz Ali
-   * @since 24-01-2025
-   * @brief Initialize weights using Xavier initialization
-   * @param rows
-   * @param cols
-   * @param fan_in
-   * @param fan_out
-   */
-  void initialize(unsigned int fan_in, unsigned int fan_out) override {
-      weights = Tensor::Zero(fan_in, fan_out);
-      const double sigma = std::sqrt(2.0 / (fan_in + fan_out));
-      std::normal_distribution<double> distribution(0.0, sigma);
+    /**
+     * @author Lam Tran, Hamiz Ali
+     * @since 28-01-2025
+     * @brief Initialize weights using Xavier initialization
+     * @param fan_in
+     * @param fan_out
+     */
+    void initialize(unsigned int fan_in, unsigned int fan_out) override
+    {
+        weights = Tensor::Zero(fan_in, fan_out);
+        const double sigma = std::sqrt(2.0 / (fan_in + fan_out));
+        std::normal_distribution<double> distribution(0.0, sigma);
 
-      // Random number generators are not thread-safe
-      // #pragma omp parallel for collapse(2)
-      for (unsigned int i = 0; i < fan_in; i++) {
-          for (unsigned int j = 0; j < fan_out; j++) {
-              weights(i, j) = distribution(gen);
-          }
-      }
-  }
+        weights = Tensor::NullaryExpr(fan_in, fan_out, [&]() { return distribution(gen); });
+    }
 };
 
 class He final : public Initializer
@@ -63,10 +56,8 @@ public:
 
     /**
      * @author Lam Tran, Hamiz Ali
-     * @since 24-01-2025
+     * @since 28-01-2025
      * @brief Initialize weights using He initialization
-     * @param rows
-     * @param cols
      * @param fan_in
      * @param fan_out
      */
@@ -76,14 +67,6 @@ public:
         const double sigma = std::sqrt(2.0 / fan_in);
         std::normal_distribution<double> distribution(0.0, sigma);
 
-        // Random number generators are not thread-safe
-        // #pragma omp parallel for collapse(2)
-        for (unsigned int i = 0; i < fan_in; i++)
-        {
-            for (unsigned int j = 0; j < fan_out; j++)
-            {
-                weights(i, j) = distribution(gen);
-            }
-        }
+        weights = Tensor::NullaryExpr(fan_in, fan_out, [&]() { return distribution(gen); });
     }
 };
