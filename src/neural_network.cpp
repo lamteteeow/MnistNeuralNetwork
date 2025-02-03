@@ -113,10 +113,10 @@ int main(int argc, char *argv[])
         return 1;
     }
     // configurations for the neural network
-    int batch_size = std::stoi(configs["batch_size"]);
-    int hidden_size = std::stoi(configs["hidden_size"]);
+    unsigned int batch_size = static_cast<unsigned int>(std::stoul(configs["batch_size"]));
+    unsigned int hidden_size = static_cast<unsigned int>(std::stoi(configs["hidden_size"]));
     double learning_rate = std::stod(configs["learning_rate"]);
-    int num_epochs = std::stoi(configs["num_epochs"]);
+    unsigned int num_epochs = static_cast<unsigned int>(std::stoi(configs["num_epochs"]));
 
     // configurations for the dataset
     std::string rel_path_train_images = configs["rel_path_train_images"];

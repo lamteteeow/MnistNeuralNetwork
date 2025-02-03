@@ -155,11 +155,11 @@ int main(int argc, const char *argv[])
     }
 
     std::string const label_file_name = argv[1];
-    int label_index = -1;
+    long label_index;
 
     if (argc == 3)
     {
-        label_index = std::stoi(argv[2]);
+        label_index = std::stol(argv[2]);
     }
 
     std::vector<Tensor<double>> labels;

@@ -52,7 +52,7 @@ class NeuralNetwork {
     NeuralNetwork(unsigned int input_size, unsigned int hidden_size, unsigned int output_size, double learning_rate)
         : input_size(input_size), hidden_size(hidden_size), output_size(output_size), learning_rate(learning_rate) {
         // Initialize optimizer and initializers
-        int seed = 123;
+        unsigned long seed = 12345;
         optimizer = new SGD(learning_rate);
         // optimizer1 = new ADAM(learning_rate, 0.9, 0.999, 1e-8);
         // optimizer1 = new SGD(learning_rate);

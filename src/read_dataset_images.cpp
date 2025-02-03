@@ -174,11 +174,11 @@ int main(int argc, const char * argv[]) {
     }
 
     std::string const image_file_name = argv[1];
-    int image_index = -1;
+    long image_index;
 
     if (argc == 3)
     {
-        image_index = std::stoi(argv[2]);
+        image_index = std::stol(argv[2]);
     }
 
     std::vector<Tensor<double>> images;
