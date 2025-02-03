@@ -155,7 +155,7 @@ int main(int argc, const char *argv[])
     }
 
     std::string const label_file_name = argv[1];
-    long label_index;
+    long label_index = -1;
 
     if (argc == 3)
     {

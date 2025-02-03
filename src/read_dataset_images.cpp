@@ -174,7 +174,7 @@ int main(int argc, const char * argv[]) {
     }
 
     std::string const image_file_name = argv[1];
-    long image_index;
+    long image_index = -1;
 
     if (argc == 3)
     {
